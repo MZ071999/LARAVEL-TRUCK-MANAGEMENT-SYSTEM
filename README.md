@@ -25,7 +25,7 @@ The system will be used by the admin of the service. There will be authenticatio
 
 ## Features and Functionalities
 
-### Truck Page
+#### Truck Page
 
 - Admin can: 
   * Add new trucks
@@ -37,7 +37,7 @@ The system will be used by the admin of the service. There will be authenticatio
   * There will be a message "AVAILABLE" displayed if a truck can load more items
   * In the edit page, there will be a message displayed indicating how many more packages can be load into the truck
 
-### Package Page
+#### Package Page
 
 - Admin can:
   * Add new packages
