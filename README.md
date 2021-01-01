@@ -36,6 +36,7 @@ The system will be used by the admin of the service. There will be authenticatio
   * There will be a message "FULL" displayed if a truck has reached maximum limit
   * There will be a message "AVAILABLE" displayed if a truck can load more items
   * In the edit page, there will be a message displayed indicating how many more packages can be load into the truck
+  * If an item is assigned to specific truck on the item table, it will be updated automatically on the truck table as well
 
 #### Package Page
 
