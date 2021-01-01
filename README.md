@@ -25,12 +25,22 @@ The system will be used by the admin of the service. There will be authenticatio
 
 ## Features and Functionalities
 
-- Admin can add new packages
-- Admin can add new trucks
-- Admin can define the number of packages that need to be shipped in a day
-- Admin can update the truck table
-- Admin can modify truck table
-- Admin can keep truck at which truck is available for shipping
+### Truck Page
+
+- Admin can: 
+  * Add new trucks
+  * Edit/Update/ Delete item from truck table
+
+- Features and functionalities:
+  * One truck can load a maximum 50 items.
+  * There will be a message "FULL" displayed if a truck has reached maximum limit
+  * There will be a message "AVAILABLE" displayed if a truck can load more items
+  * In the edit page, there will be a message displayed indicating how many more packages can be load into the truck
+
+### Package Page
+
+- Admin can:
+  * Add new packages
 
 ---
 
