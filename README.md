@@ -31,7 +31,7 @@ With simple and easy to understand UI, Parcel Management System will help system
 
 :pushpin: Truck Page :truck: <br />
 
-:paperclip: Admin can: <br/>
+- :paperclip: Admin can: <br/>
   * Add new trucks
   * Edit/Update/ Delete item from truck table
 
