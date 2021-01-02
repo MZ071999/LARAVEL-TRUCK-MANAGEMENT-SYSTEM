@@ -31,7 +31,7 @@ With simple and easy to understand UI, Parcel Management System will help system
 
 :pushpin: Truck Page :truck: <br />
 
-- :paperclip: Admin can: <br/>
+- :man: Admin can: <br/>
   * Add new trucks
   * Edit/Update/ Delete item from truck table
 
@@ -41,6 +41,7 @@ With simple and easy to understand UI, Parcel Management System will help system
   * There will be a message "AVAILABLE" displayed if a truck can load more items
   * In the edit page, there will be a message displayed indicating how many more packages can be load into the truck
   * If an item is assigned to specific truck on the item table, it will be updated automatically on the truck table as well
+  
 <br />
 
 :pushpin: Package Page :package:
