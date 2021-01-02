@@ -21,6 +21,8 @@ The system will be used by the admin of the service. There will be authenticatio
 
 ## Objectives
 
+With simple and easy to understand UI, Parcel Management System will help system admin to do CRUD operation on Trucks data, Package data and Postman Data.
+
 ---
 
 ## Features and Functionalities
