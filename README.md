@@ -1,8 +1,6 @@
 
-<div align="center" font-size:6em> :truck: Package Management System </div>
-<br>
-<br>
-<br>
+# <div align="center"> :truck: Package Management System </div>
+
 ## Group Members:
 
 :sparkles: Mufida Zuhrah Binti Zulhendri (1723396) <br/>
