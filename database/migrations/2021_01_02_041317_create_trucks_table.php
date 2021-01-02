@@ -14,7 +14,7 @@ class CreateTrucksTable extends Migration
     public function up()
     {
         Schema::create('trucks', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('truck_id');
             $table->string('truck_number');
             $table->integer('no_of_items');
             $table->string('postman_name');
