@@ -27,7 +27,7 @@ With simple and easy to understand UI, Parcel Management System will help system
 
 ## Features and Functionalities
 
--There will be authentication involved for when the admin do log in into the system
+:pushpin: There will be authentication involved for when the admin do log in into the system <br />
 
 #### :truck: Truck Page
 
@@ -42,7 +42,7 @@ With simple and easy to understand UI, Parcel Management System will help system
   * In the edit page, there will be a message displayed indicating how many more packages can be load into the truck
   * If an item is assigned to specific truck on the item table, it will be updated automatically on the truck table as well
 
-#### Package Page
+#### :package: Package Page
 
 - Admin can:
   * Add new packages
