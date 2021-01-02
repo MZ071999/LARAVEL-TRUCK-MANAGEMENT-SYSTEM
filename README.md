@@ -3,9 +3,9 @@
 
 ## Group Members:
 
-* Mufida Zuhrah Binti Zulhendri (1723396)
-* Hafiz Pangteh
-* Nada Halabee
+* :sparkles: Mufida Zuhrah Binti Zulhendri (1723396)
+* Hafiz Pangteh (1528007)
+* Nada Halabee (1622086)
 
 ---
 
