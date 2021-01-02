@@ -1,5 +1,5 @@
 
-# :truck: Package Management System
+# <div align="center"> :truck: Package Management System </div>
 
 ## Group Members:
 
@@ -11,11 +11,7 @@
 
 ## Introduction
 
-This web application is built to track shipped packages and shipping trucks in a delivery service center.
-
-<br />
-
-The system will be used by the admin of the service. 
+This web application is built to track shipped packages and shipping trucks in a delivery service center. The system will be used by the admin of the service. 
 
 ---
 
@@ -27,11 +23,11 @@ With simple and easy to understand UI, Parcel Management System will help system
 
 ## Features and Functionalities
 
--There will be authentication involved for when the admin do log in into the system
+:pushpin: Admin first logged in to the system. There will be authentication involved. <br />
 
-#### :truck: Truck Page
+:pushpin: Truck Page :truck: <br />
 
-- Admin can: 
+- :man: Admin can: <br/>
   * Add new trucks
   * Edit/Update/ Delete item from truck table
 
@@ -41,8 +37,10 @@ With simple and easy to understand UI, Parcel Management System will help system
   * There will be a message "AVAILABLE" displayed if a truck can load more items
   * In the edit page, there will be a message displayed indicating how many more packages can be load into the truck
   * If an item is assigned to specific truck on the item table, it will be updated automatically on the truck table as well
+  
+<br />
 
-#### Package Page
+:pushpin: Package Page :package:
 
 - Admin can:
   * Add new packages
@@ -51,35 +49,35 @@ With simple and easy to understand UI, Parcel Management System will help system
 
 ## Views, Controllers, Routes, Models
 
-#### Views
-- auth
-  * passwords
-    * confirm.blade.php
-    * email.blade.php
-    * reset.blade.php
+#### :scroll: Views
+- :file_folder: auth
+    * :file_folder: passwords
+        * confirm.blade.php
+        * email.blade.php
+        * reset.blade.php
   * login.blade.php
   * register.blade.php
   * verify.blade.php
-- layouts
+- :file_folder: layouts
   * app.blade.php
-- posts
-- truck
+- :file_folder: posts
+- :file_folder: truck
   * create.blade.php
   * edit.blade.php
   * index.blade.php
   * show.blade.php
-- package
-- postman
+- :file_folder: package
+- :file_folder: postman
 - home.blade.php
 
-#### Controllers
-- Auth
+#### :hammer: Controllers
+- :file_folder: Auth
 - HomeController
 - TruckController
 
-#### Routes
+#### :mailbox_closed: Routes
 
-#### Models
+#### :books: Models
 - User
 - Table
 - Package
