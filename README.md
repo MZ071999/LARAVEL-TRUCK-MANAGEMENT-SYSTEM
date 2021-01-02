@@ -54,7 +54,7 @@ With simple and easy to understand UI, Parcel Management System will help system
 
 #### :scroll: Views
 - :file_folder: auth
-  * passwords
+  :file_folder: passwords
     * confirm.blade.php
     * email.blade.php
     * reset.blade.php
