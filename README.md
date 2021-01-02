@@ -1,5 +1,5 @@
 
-# Package Management System
+# :truck: Package Management System
 
 ## Group Members:
 
@@ -29,7 +29,7 @@ With simple and easy to understand UI, Parcel Management System will help system
 
 -There will be authentication involved for when the admin do log in into the system
 
-#### Truck Page
+#### :truck: Truck Page
 
 - Admin can: 
   * Add new trucks
