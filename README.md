@@ -52,8 +52,8 @@ With simple and easy to understand UI, Parcel Management System will help system
 
 ## Views, Controllers, Routes, Models
 
-#### Views
-- auth
+#### :scroll: Views
+- :file_folder: auth
   * passwords
     * confirm.blade.php
     * email.blade.php
@@ -61,26 +61,26 @@ With simple and easy to understand UI, Parcel Management System will help system
   * login.blade.php
   * register.blade.php
   * verify.blade.php
-- layouts
+- :file_folder: layouts
   * app.blade.php
-- posts
-- truck
+- :file_folder: posts
+- :file_folder: truck
   * create.blade.php
   * edit.blade.php
   * index.blade.php
   * show.blade.php
-- package
-- postman
+- :file_folder: package
+- :file_folder: postman
 - home.blade.php
 
-#### Controllers
-- Auth
+#### :hammer: Controllers
+- :file_folder: Auth
 - HomeController
 - TruckController
 
-#### Routes
+#### :mailbox_closed: Routes
 
-#### Models
+#### :books: Models
 - User
 - Table
 - Package
