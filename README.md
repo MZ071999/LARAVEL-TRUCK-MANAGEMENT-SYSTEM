@@ -1,10 +1,5 @@
 
-# <div align="center"> :truck: Package Management System 
-<pre>
-
-
-</pre>
-</div>
+# <div align="center"> :truck: Package Management System </div>
 
 ## Group Members:
 
