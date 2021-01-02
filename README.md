@@ -15,17 +15,19 @@ This web application is built to track shipped packages and shipping trucks in a
 
 <br />
 
-The system will be used by the admin of the service. There will be authentication involved for when the admin do log in into the system
+The system will be used by the admin of the service. 
 
 ---
 
 ## Objectives
 
-With simple and easy to understand UI, Parcel Management System will help system admin to do CRUD operation on Trucks data, Package data and Postman Data.
+With simple and easy to understand UI, Parcel Management System will help system admin to do CRUD operation (Create, Read, Update, Delete) on Trucks data, Package data and Postman Data.
 
 ---
 
 ## Features and Functionalities
+
+-There will be authentication involved for when the admin do log in into the system
 
 #### Truck Page
 
@@ -48,6 +50,40 @@ With simple and easy to understand UI, Parcel Management System will help system
 ---
 
 ## Views, Controllers, Routes, Models
+
+#### Views
+- auth
+  * passwords
+    * confirm.blade.php
+    * email.blade.php
+    * reset.blade.php
+  * login.blade.php
+  * register.blade.php
+  * verify.blade.php
+- layouts
+  * app.blade.php
+- posts
+- truck
+  * create.blade.php
+  * edit.blade.php
+  * index.blade.php
+  * show.blade.php
+- package
+- postman
+- home.blade.php
+
+#### Controllers
+- Auth
+- HomeController
+- TruckController
+
+#### Routes
+
+#### Models
+- User
+- Table
+- Package
+- Postman
 
 ---
 
