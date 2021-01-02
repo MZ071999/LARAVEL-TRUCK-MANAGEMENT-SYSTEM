@@ -1,5 +1,5 @@
 
-<div align="center" font-size:6> :truck: Package Management System </div>
+<div align="center" font-size:6em> :truck: Package Management System </div>
 <br>
 <br>
 <br>
