@@ -11,11 +11,7 @@
 
 ## Introduction
 
-This web application is built to track shipped packages and shipping trucks in a delivery service center.
-
-<br />
-
-The system will be used by the admin of the service. 
+This web application is built to track shipped packages and shipping trucks in a delivery service center. The system will be used by the admin of the service. 
 
 ---
 
