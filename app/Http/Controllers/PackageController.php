@@ -14,8 +14,8 @@ class PackageController extends Controller
      */
     public function index()
     {
-        $package = package::all();
-        return view('package.index', compact('package'));
+        $package = Package::all();
+        return view('package.index', compact('package', $package));
     }
 
     /**
@@ -25,7 +25,7 @@ class PackageController extends Controller
      */
     public function create()
     {
-        //
+        return view('package.create');
     }
 
     /**
@@ -36,7 +36,20 @@ class PackageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Validate
+        $request->validate([
+            'packagenumber' => 'required',
+            'trucknumber' => 'required',
+            'destination' => 'required',
+            'operationdate' => 'required'
+        ]);
+        $package = Task::create([
+            'packagenumber' => $request->packagenumber,
+            'trucknumber' => $request->trucknumber,
+            'destination' => $request->destination,
+            'operationdate' => $request->operationdate
+        ]);
+        return redirect('/task/' .$package->package_id);
     }
 
     /**
@@ -47,7 +60,7 @@ class PackageController extends Controller
      */
     public function show(Package $package)
     {
-        //
+        return view('package.show', compact('package', $package));
     }
 
     /**
