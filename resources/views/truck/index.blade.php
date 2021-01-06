@@ -31,16 +31,16 @@
     @foreach($trucks as $count => $truck)
         <tr>
             <td>{{++$count}}</td>
-            <td><a href="{{ route('truck.show',$truck->id)}}">{{$truck->truck_number}}</a></td>
+            <td><a href="{{ route('truck.show',$truck->truck_id)}}">{{$truck->truck_number}}</a></td>
             <td>{{$truck->no_of_items}}</td>
             <td>{{$truck->postman_name}}</td>
             <td>{{$truck->date_of_operation}}</td>
             <td>{{$truck->status}}</td>
             <td class="text-center">
-                <a href="{{ route('truck.edit',$truck->id)}}" class="btn btn-primary btn-block">Edit</a>
+                <a href="{{ route('truck.edit',$truck->truck_id)}}" class="btn btn-primary btn-block">Edit</a>
             </td>
             <td class="text-center">
-                <form action="{{ route('truck.destroy', $truck->id)}}" method="post">
+                <form action="{{ route('truck.destroy', $truck->truck_id)}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-danger btn-block" type="submit">Delete</button>

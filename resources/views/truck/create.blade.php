@@ -18,7 +18,7 @@
       <form method="post" action="{{ route('truck.store') }}">
           @csrf
           <div class="form-group">    
-              <label for="truck_nnumber">Truck Number </label>
+              <label for="truck_number">Truck Number </label>
               <input type="text" class="form-control" name="truck_number"/>
           </div>
           <div class="form-group">
