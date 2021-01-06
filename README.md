@@ -42,13 +42,17 @@ With simple and easy to understand UI, Parcel Management System will help system
 
 :pushpin: Package Page :package:
 
-- Admin can:
+- :man: Admin can:
   * Perform CRUD operation on package table
   * Add new Package/ Edit some item on the Package/ Update it/ Delete item from the Package table
   
 <br />
   
 :pushpin: Postman Page :postman:
+
+- :man: Admin can:
+  * Perform CRUD operation on Postman table
+  * Add new Postman/ Edit some item on the Postman/ Update it/ Delete item from the Postman table
 
 ---
 
