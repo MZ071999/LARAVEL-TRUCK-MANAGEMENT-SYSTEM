@@ -38,8 +38,8 @@
               <input type="text" class="form-control" name="status"/>
           </div>
           <div class="row justify-content-center">
-          <a href="{{ route('truck.index')}}" class="btn btn-primary">Return</a>&nbsp;&nbsp;                        
-          <button type="submit" class="btn btn-primary text-center">Save Details</button>
+          <a href="{{ route('truck.index')}}" class="btn btn-primary bg-danger">Return</a>&nbsp;&nbsp;                        
+          <button type="submit" class="btn btn-primary text-center bg-success">Save Details</button>
           </div>
       </form>
   </div>

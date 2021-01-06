@@ -51,7 +51,7 @@
     </tbody>
   </table>
   <div class="text-center">
-    <a style="margin: 19px;" href="{{ route('truck.create')}}" class="btn btn-primary">New Truck Details</a>
+    <a style="margin: 19px;" href="{{ route('truck.create')}}" class="btn btn-primary bg-success">New Truck Details</a>
   </div>
 </div>
 

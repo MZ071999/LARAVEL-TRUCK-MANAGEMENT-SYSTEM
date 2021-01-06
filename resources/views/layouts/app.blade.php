@@ -60,16 +60,16 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item">
+                            <li class="nav-item font-weight-bold pl-3">
                                     <a class="nav-link" href="{{ route('truck.index') }}"> Truck </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item font-weight-bold pl-3">
                                     <a class="nav-link"> Postman </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item font-weight-bold pl-3">
                                     <a class="nav-link"> Package </a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown font-weight-bold pl-3">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>

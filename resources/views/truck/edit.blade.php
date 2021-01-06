@@ -39,8 +39,8 @@
                 <input type="text" class="form-control" name="status" value="{{ $trucks->status }}">
             </div>
             <div class="text-center">
-            <a href="{{ route('truck.index')}}" class="btn btn-primary">Return</a>&nbsp;&nbsp;    
-            <button type="submit" class="btn btn-primary">Update Details</button>
+            <a href="{{ route('truck.index')}}" class="btn btn-primary bg-danger">Return</a>&nbsp;&nbsp;    
+            <button type="submit" class="btn btn-primary bg-success">Update Details</button>
             </div>
         </form>
     </div>

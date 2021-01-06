@@ -24,7 +24,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card text-center">
-            <div class="card-header bg-success">{{ __('Choose Which to Track: ') }}</div>
+            <div class="card-header bg-success font-weight-bold">Choose Which to Track: </div>
                 <div class="card-body bg-light">
                 <a href="{{ route('truck.index')}}">Truck</a>
                 </div>
