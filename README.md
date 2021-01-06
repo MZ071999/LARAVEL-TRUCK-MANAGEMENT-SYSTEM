@@ -17,19 +17,19 @@ This web application is built to track shipped packages and shipping trucks in a
 
 ## Objectives
 
-With simple and easy to understand UI, Parcel Management System will help system admin to do CRUD operation (Create, Read, Update, Delete) on Trucks data, Package data and Postman Data.
+With simple and easy to understand UI, Parcel Management System will help system admin to do CRUD operation (Create, Read, Update, Delete) on every main element of the system which are Trucks data, Package data and Postman Data.
 
 ---
 
 ## Features and Functionalities
 
-:pushpin: Admin first logged in to the system. There will be authentication involved. <br />
+:pushpin: Admin first logged into the system. There will be authentication involved. <br />
 
 :pushpin: Truck Page :truck: <br />
 
 - :man: Admin can: <br/>
-  * Add new trucks
-  * Edit/Update/ Delete item from truck table
+  * Perform CRUD operation on truck table
+  * Add new Truck/ Edit some item on the truck/ Update it/ Delete item from the truck table
 
 - Features and functionalities:
   * One truck can load a maximum 50 items.
@@ -43,7 +43,12 @@ With simple and easy to understand UI, Parcel Management System will help system
 :pushpin: Package Page :package:
 
 - Admin can:
-  * Add new packages
+  * Perform CRUD operation on package table
+  * Add new Package/ Edit some item on the Package/ Update it/ Delete item from the Package table
+  
+<br />
+  
+:pushpin: Postman Page :postman:
 
 ---
 
