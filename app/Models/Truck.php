@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Truck extends Model
 {
     use HasFactory;
-    protected $fillable = ['truck_number', 'postman_name', 'date_of_operation'];
+    protected $fillable = ['truck_number', 'no_of_items', 'postman_name', 'date_of_operation', 'status'];
 }

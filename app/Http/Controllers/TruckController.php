@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Truck;
 
+const TRUCK = '/truck';
+
 class TruckController extends Controller
 {
     /**
@@ -14,8 +16,8 @@ class TruckController extends Controller
      */
     public function index()
     {
-        $truck = Truck::all();
-        return view('truck.index', compact('truck'));
+        $trucks = Truck::all();
+        return view('truck.index', compact('trucks'));
     }
 
     /**
@@ -25,7 +27,7 @@ class TruckController extends Controller
      */
     public function create()
     {
-        //
+        return view('truck.create');
     }
 
     /**
@@ -36,7 +38,22 @@ class TruckController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'truck_number'=>'required',
+            'no_of_items'=>'required',
+            'postman_name'=>'required',
+            'date_of_operation'=>'required',
+            'status'=>'required'
+        ]);
+        $trucks = new Truck([
+            'truck_number' => $request->get('truck_number'),
+            'no_of_items' => $request->get('no_of_items'),
+            'postman_name' => $request->get('postman_name'),
+            'date_of_operation' => $request->get('date_of_operation'),
+            'status' => $request->get('status')
+        ]);
+        $trucks->save();
+        return redirect(TRUCK)->with('success', 'Truck Details Saved!');
     }
 
     /**
@@ -47,7 +64,8 @@ class TruckController extends Controller
      */
     public function show($id)
     {
-        //
+        $trucks = Truck::find($id);
+        return view('truck.show', compact('trucks'));
     }
 
     /**
