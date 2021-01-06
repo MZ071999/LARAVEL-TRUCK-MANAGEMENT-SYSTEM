@@ -8,19 +8,19 @@
 :sparkles: Nada Halabee (1622086) 
 
 ---
-<br />
+
 ## Introduction
 
 This web application is built to track shipped packages and shipping trucks in a delivery service center. The system will be used by the admin of the service. 
 
 ---
-<br />
+
 ## Objectives
 
 With simple and easy to understand UI, Parcel Management System will help system admin to do CRUD operation (Create, Read, Update, Delete) on every main element of the system which are Trucks data, Package data and Postman Data.
 
 ---
-<br />
+
 ## Features and Functionalities
 
 :pushpin: Admin first logged into the system. There will be authentication involved. <br />
@@ -55,7 +55,7 @@ With simple and easy to understand UI, Parcel Management System will help system
   * Add new Postman/ Edit some item on the Postman/ Update it/ Delete item from the Postman table
 
 ---
-<br />
+
 ## Views, Controllers, Routes, Models
 
 #### :scroll: Views
@@ -93,13 +93,13 @@ With simple and easy to understand UI, Parcel Management System will help system
 - Postman
 
 ---
-<br />
+
 ## ERD
 
 ---
-<br />
+
 ## Sequence Diagram
 
 ---
-<br />
+
 ## References
