@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Package extends Model
 {
+
     use HasFactory;
+    protected $primaryKey = 'package_id';
+
+    protected $fillable = ['packagenumber',
+    'trucknumber', 'destination', 'operationdate'];
 }
