@@ -38,18 +38,19 @@ class PackageController extends Controller
     {
         //Validate
         $request->validate([
-            'packagenumber' => 'required',
-            'trucknumber' => 'required',
+            'truck_number' => 'required',
+            'package_number' => 'required',
             'destination' => 'required',
-            'operationdate' => 'required'
+            'date_of_operation' => 'required'
         ]);
-        $package = Task::create([
-            'packagenumber' => $request->packagenumber,
-            'trucknumber' => $request->trucknumber,
+        $package = Package::create([
+            'truck_number' => $request->truck_number,
+            'package_number' => $request->package_number,
             'destination' => $request->destination,
-            'operationdate' => $request->operationdate
+            'date_of_operation' => $request->date_of_operation
         ]);
-        return redirect('/task/' .$package->package_id);
+        return redirect('/package/' .$package->package_id);
+       
     }
 
     /**
@@ -71,8 +72,8 @@ class PackageController extends Controller
      */
     public function edit(Package $package)
     {
-        $package = Package::find($package_id);
-        return view('package.edit', compact('package'));
+        
+        return view('package.edit', compact('package', $package));
     }
 
     /**
@@ -84,7 +85,20 @@ class PackageController extends Controller
      */
     public function update(Request $request, Package $package)
     {
-        //
+        //validate
+        $request->validate([
+            'truck_number' => 'required',
+            'package_number' => 'required',
+            'destination' => 'required',
+            'date_of_operation' => 'required'
+        ]);
+        $package->truck_number = $request->truck_number;
+        $package->package_number = $request->package_number;
+        $package->destination = $request->destination;
+        $package->date_of_operation = $request->date_of_operation;
+        $package->save();
+        $request->session()->flash('message', 'Sucessfully update package');
+        return redirect('package');
     }
 
     /**
@@ -93,8 +107,10 @@ class PackageController extends Controller
      * @param  \App\Models\Package  $package
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Package $package)
+    public function destroy(Request $request, Package $package)
     {
-        //
+        $package->delete();
+        $request->session()->flash('message', 'Sucessfully delete package');
+        return redirect('package');
     }
 }
