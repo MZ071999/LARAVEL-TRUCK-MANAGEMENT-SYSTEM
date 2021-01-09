@@ -71,7 +71,8 @@ class PackageController extends Controller
      */
     public function edit(Package $package)
     {
-        //
+        $package = Package::find($package_id);
+        return view('package.edit', compact('package'));
     }
 
     /**
