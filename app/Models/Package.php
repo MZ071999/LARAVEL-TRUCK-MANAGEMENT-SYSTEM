@@ -11,6 +11,6 @@ class Package extends Model
     use HasFactory;
     protected $primaryKey = 'package_id';
 
-    protected $fillable = ['packagenumber',
-    'trucknumber', 'destination', 'operationdate'];
+   // protected $fillable = ['truck_number',
+   // 'package_number', 'destination', 'date_of_operation'];
 }
