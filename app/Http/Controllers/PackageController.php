@@ -49,7 +49,7 @@ class PackageController extends Controller
             'destination' => $request->destination,
             'date_of_operation' => $request->date_of_operation
         ]);
-        return redirect('/package/' .$package->package_id);
+        return redirect('package');
        
     }
 
