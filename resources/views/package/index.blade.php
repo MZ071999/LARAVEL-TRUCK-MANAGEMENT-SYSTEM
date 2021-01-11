@@ -1,55 +1,57 @@
-@extends('layouts.mainlayout')
+@extends('layouts.app')
 @section('content')
-    <div class="container">
-        <div class="col-sm-12">
-            <br />
-            <h3 class="display-5 text-center">package Details</h3> 
-            @if(Session::has('message'))
-                <div class="alert alert-info">{{Session::get('message')}}</div>
-            {{Session::get('message')}}
-            @endif
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                      <th scope="col">No</th>
-                      <th scope="col">Truck Number</th>
-                      <th scope="col">Package number</th>
-                      <th scope="col">Destination</th>
-                      <th scope="col">Operation Date</th>
-                      <th scope="col">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($package as $package)
-                    <tr>
-                        <th scope="row">{{$package->package_id}}</th>
-                            <td><a href="/package/{{$package->package_id}}">{{$package->truck_number}}</a></td>
-                            <td>{{$package->package_number}}</td>
-                            <td>{{$package->destination}}</td>
-                            <td>{{$package->date_of_operation}}</td>
-                        <td>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="{{ URL::to("package/" .$package->package_id . '/edit') }}">
-                                <button type="button" class="btn btn-warnig">Edit</button>
-                            </a>
-                            <form action="{{url('package', [$package->package_id])}}" method="post">
-                                <input type="hidden" name="_method" value="delete">
-                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                <input type="submit" class="btn btn-danger" value="delete">
-                            </form>
-                            </div> 
-                        </td> 
-                    </tr>
-                    @endforeach
-                </tbody>
-              </table>
-              <div class="btn-group" role="group" aria-label="Basic example" color="Blue">
-                <a href="{{url("package/create")}}">
-                    <button type="button" class="btn btn-warnig">ADD Package</button>
-                </a>
-            </div>
-        
 
+<div class="row">
+
+<div class="col-sm-12">
+  @if(session()->get('success'))
+    <div class="alert alert-success text-center">
+      {{ session()->get('success') }}  
     </div>
+  @endif
+</div>
 
+<div class="col-sm-12">
+<br />
+<h3 class="display-5 text-center">Package Details</h3> 
+
+<table class="table table-striped mt-5">
+    <thead>
+        <tr>
+          <th>No</th>
+          <th>Truck Number</th>
+          <th>Package Number</th>
+          <th>Destination</th>
+          <th>Operation Date</th>
+          <th colspan="2" class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach($package as $count => $package)
+        <tr>
+            <td>{{++$count}}</td>
+            <td><a href="{{ route('package.show',$package->package_id)}}">{{$package->truck_number}}</a></td>
+            <td>{{$package->package_number}}</td>
+            <td>{{$package->destination}}</td>
+            <td>{{$package->date_of_operation}}</td>
+            <td class="text-center">
+                <a href="{{ route('package.edit',$package->package_id)}}" class="btn btn-primary btn-block">Edit</a>
+            </td>
+            <td class="text-center">
+                <form action="{{ route('package.destroy', $package->package_id)}}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <button class="btn btn-danger btn-block" type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        @endforeach
+    </tbody>
+  </table>
+  <div class="text-center">
+    <a style="margin: 19px;" href="{{ route('package.create')}}" class="btn btn-primary bg-success">New package Details</a>
+  </div>
+</div>
+
+</div>
 @endsection
