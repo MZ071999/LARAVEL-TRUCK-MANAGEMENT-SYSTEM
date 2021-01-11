@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\postman;
 use Illuminate\Http\Request;
+
 class postmanController extends Controller
 {
     /**
@@ -49,7 +51,7 @@ class postmanController extends Controller
             'date_of_operation' => $request->get('date_of_operation')
         ]);
        
-        return redirect('/postman/' .$postman->postman_id);
+        return redirect('postman');
     }
 
     /**
