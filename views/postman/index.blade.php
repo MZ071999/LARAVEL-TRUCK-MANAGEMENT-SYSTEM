@@ -45,6 +45,11 @@
             @endforeach
         </tbody>
       </table>
+      <div class="btn-group" role="group" aria-label="Basic example" color="Blue">
+                <a href="{{url("postman/create")}}">
+                    <button type="button" class="btn btn-warnig">Add Postman</button>
+                </a>
+            </div>
     </div>
 
 
