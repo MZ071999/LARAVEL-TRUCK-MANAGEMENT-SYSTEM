@@ -11,6 +11,10 @@
                 <strong>Package number: </strong> {{$package->package_number}}<br>
                 <strong>Destination: </strong> {{$package->destination}}<br>
                 <strong>Operation Date: </strong> {{$package->date_of_operation}}<br>
+                <div class="btn-group" role="group" aria-label="Basic example" color="Blue">
+                    <a href="{{url("package/")}}">
+                        <button type="button" class="btn btn-warnig">Back to Index</button>
+                    </a>
             </p>
         </div>
 </div>
