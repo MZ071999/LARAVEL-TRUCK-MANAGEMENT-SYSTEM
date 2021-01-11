@@ -1,39 +1,45 @@
-@extends('layouts.mainlayout')
-
+@extends('layouts.app')
 @section('content')
-   <div class="container"> 
-       <h1 class="mt-5">Add New Package</h1>
-    <hr>
-    <form action="/package" method="post">
-        {{csrf_field()}}
-        <div class="form-group">   
-             <div class="form-group">
-            <label for="title">Truck Number</label>
-            <input type="text" class="form-control" id="truck_number" name="truck_number">
-        </div>
-            <label for="title">Package Number</label>
-            <input type="text" class="form-control" id="package_number" name="package_number">
-        </div>
-    
-        <div class="form-group">
-            <label for="title">Destination</label>
-            <input type="text" class="form-control" id="destination" name="destination">
-        </div>
-        <div class="form-group">
-            <label for="title">Operation Date</label>
-            <input type="date" class="form-control" id="date_of_operation" name="date_of_operation">
-        </div>
-        @if($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{$error}}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-   </div>
-
+<div class="row">
+ <div class="col-sm-8 offset-sm-2">
+  <br />
+    <h3 class="display-5 text-center">Add New Package Details</h3>
+  <div>
+    @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+      </div>
+      <br />
+    @endif
+      <form method="post" action="{{ route('package.store') }}">
+          @csrf
+          <div class="form-group">    
+              <label for="truck_number">Truck Number </label>
+              <input type="text" class="form-control" name="truck_number"/>
+          </div>
+          <div class="form-group">
+              <label for="no_of_items">Package Number</label>
+              <input type="number" class="form-control" name="package_number"/>
+          </div>
+          <div class="form-group">
+              <label for="postman_name">Destination</label>
+              <input type="text" class="form-control" name="destination"/>
+          </div>
+          <div class="form-group">
+              <label for="date_of_operation">Date of Operation</label>
+              <input type="date" class="form-control" name="date_of_operation"/>
+          </div>
+          
+          <div class="row justify-content-center">
+          <a href="{{ route('package.index')}}" class="btn btn-primary bg-danger">Return</a>&nbsp;&nbsp;                        
+          <button type="submit" class="btn btn-primary text-center bg-success">Save Details</button>
+          </div>
+      </form>
+  </div>
+</div>
+</div>
 @endsection
