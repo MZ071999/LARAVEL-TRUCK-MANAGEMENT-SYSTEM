@@ -23,3 +23,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('truck', 'App\Http\Controllers\TruckController');
+Route::resource('package', 'App\Http\Controllers\PackageController');
+Route::resource('postman','App\Http\Controllers\postmanController');

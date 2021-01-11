@@ -29,10 +29,10 @@
                 <a href="{{ route('truck.index')}}">Truck</a>
                 </div>
                 <div class="card-body">
-                    Package
+                <a href="{{ route('package.index')}}"> Package </a>
                 </div>
                 <div class="card-body bg-light">
-                    Postman
+                <a href="{{ route('postman.index')}}"> Postman </a>
                 </div>
             </div>
         </div>

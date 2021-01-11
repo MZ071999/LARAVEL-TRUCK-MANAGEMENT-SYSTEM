@@ -1,9 +1,9 @@
-@extends('layouts.mainlayout')
+@extends('layouts.app')
 @section('content')
 
 <div class="col-sm-12">
     <br />
-    <h3 class="display-5 text-center">postman Details</h3> 
+    <h3 class="display-5 text-center"> Postman Details</h3> 
     @if(Session::has('message'))
         <div class="alert alert-info">{{Session::get('message')}}</div>
     {{Session::get('message')}}
