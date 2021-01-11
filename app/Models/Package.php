@@ -11,4 +11,9 @@ class Package extends Model
     protected $primaryKey = 'package_id';
 
     protected $fillable = ['truck_number', 'package_number', 'destination', 'date_of_operation'];
+    
+     public function Truck(){
+        return $this->belongsTo(Truck::class, 'truck_number');
+    }
+    
 }
