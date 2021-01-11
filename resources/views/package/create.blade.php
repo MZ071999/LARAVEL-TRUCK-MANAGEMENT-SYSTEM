@@ -22,11 +22,11 @@
               <input type="text" class="form-control" name="truck_number"/>
           </div>
           <div class="form-group">
-              <label for="no_of_items">Package Number</label>
-              <input type="number" class="form-control" name="package_number"/>
+              <label for="package_name">Package Number</label>
+              <input type="text" class="form-control" name="package_number"/>
           </div>
           <div class="form-group">
-              <label for="postman_name">Destination</label>
+              <label for="destination">Destination</label>
               <input type="text" class="form-control" name="destination"/>
           </div>
           <div class="form-group">
