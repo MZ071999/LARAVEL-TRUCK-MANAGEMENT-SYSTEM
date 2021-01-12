@@ -1,15 +1,22 @@
-@extends('layouts.mainlayout')
-
+@extends('layouts.app')
 @section('content')
-   <div class="container"> 
-       <h1 class="mt-5">Add New Postman</h1>
-    <hr>
-    <form action="/postman" method="post">
-        {{csrf_field()}}
-        <div class="form-group">
-            <label for="title">Postman id</label>
-            <input type="text" class="form-control" id="postman_id" name="postman_id">
-        </div>
+<div class="row">
+ <div class="col-sm-8 offset-sm-2">
+  <br />
+    <h3 class="display-5 text-center">Add New Postman Details</h3>
+  <div>
+    @if ($errors->any())
+      <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+      </div>
+      <br />
+    @endif
+      <form method="post" action="{{ route('postman.store') }}">
+          @csrf
         <div class="form-group">   
             <label for="title">Truck Number</label>
             <input type="text" class="form-control" id="truck_number" name="truck_number">
@@ -26,17 +33,13 @@
             <label for="title">Operation Date</label>
             <input type="date" class="form-control" id="date_of_operation" name="date_of_operation">
         </div>
-        @if($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{$error}}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-   </div>
 
+        <div class="row justify-content-center">
+          <a href="{{ route('postman.index')}}" class="btn btn-primary bg-danger">Return</a>&nbsp;&nbsp;                        
+          <button type="submit" class="btn btn-primary text-center bg-success">Save Details</button>
+          </div>
+      </form>
+  </div>
+</div>
+</div>
 @endsection
