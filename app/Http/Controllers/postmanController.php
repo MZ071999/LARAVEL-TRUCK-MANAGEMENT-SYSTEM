@@ -37,21 +37,19 @@ class postmanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'postman_id'=>'required',
             'truck_number'=>'required',
             'postman_number'=>'required',
             'postman_name'=>'required',
             'date_of_operation'=>'required'
         ]);
         $postman = postman::create([
-            'postman_id' => $request->get('postman_id'),
             'truck_number' => $request->get('truck_number'),
             'postman_number' => $request->get('postman_number'),
             'postman_name' => $request->get('postman_name'),
             'date_of_operation' => $request->get('date_of_operation')
         ]);
-       
         return redirect('postman');
+
     }
 
     /**
@@ -87,13 +85,11 @@ class postmanController extends Controller
     public function update(Request $request, postman $postman)
     {
         $request->validate([
-            'postman_id'=>'required',
             'truck_number'=>'required',
             'postman_number'=>'required',
             'postman_name'=>'required',
             'date_of_operation'=>'required'
         ]);
-        $postman->postman_id = $request->get('postman_id');
         $postman->truck_number =  $request->get('truck_number');
         $postman->postman_number = $request->get('postman_number');
         $postman->postman_name = $request->get('postman_name');
