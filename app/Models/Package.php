@@ -15,5 +15,5 @@ class Package extends Model
      public function Truck(){
         return $this->belongsTo(Truck::class, 'truck_number');
     }
-    
+
 }

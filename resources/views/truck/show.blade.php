@@ -17,23 +17,23 @@
         @endif
             <div class="form-group">
                 <label for="truck_number">Truck Number</label>
-                <input type="text" class="form-control" name="truck_number" value="{{ $truck->truck_number }}" readonly>
+                <input type="text" class="form-control" name="truck_number" value="{{ $trucks->truck_number }}" readonly>
             </div>
             <div class="form-group">
                 <label for="no_of_items">Quantity</label>
-                <input type="text" class="form-control" name="no_of_items" value="{{ $truck->no_of_items }}" readonly>
+                <input type="text" class="form-control" name="no_of_items" value="{{ $trucks->no_of_items }}" readonly>
             </div>
             <div class="form-group">
                 <label for="postman_name">Postman in Charge</label>
-                <input type="text" class="form-control" name="postman_name" value="{{ $truck->postman_name }}" readonly>
+                <input type="text" class="form-control" name="postman_name" value="{{ $trucks->postman_name }}" readonly>
             </div>
             <div class="form-group">
                 <label for="date_of_operation">Date of Operation</label>
-                <input type="text" class="form-control" name="date_of_operation" value="{{ $truck->date_of_operation }}" readonly>
+                <input type="text" class="form-control" name="date_of_operation" value="{{ $trucks->date_of_operation }}" readonly>
             </div>
             <div class="form-group">
                 <label for="status">Status </label>
-                <input type="text" class="form-control" name="status" value="{{ $truck->status }}" readonly>
+                <input type="text" class="form-control" name="status" value="{{ $trucks->status }}" readonly>
             </div>
             </form>
             <div class="text-center">

@@ -12,4 +12,8 @@ class postman extends Model
     protected $primaryKey = 'postman_id';
 
     protected $fillable = ['postman_id','truck_number','postman_number','postman_name','date_of_operation'];
+
+    public function Truck(){
+        return $this->belongsTo(Truck::class, 'truck_number');
+    }
 }

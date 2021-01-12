@@ -15,4 +15,9 @@ class Truck extends Model
     {
         return $this->hasMany(Package::class, 'truck_number');
     }
+
+    //  public function postman()
+    // {
+    //     return $this->hasOne(Package::class, 'postman_number');
+    // }
 }
