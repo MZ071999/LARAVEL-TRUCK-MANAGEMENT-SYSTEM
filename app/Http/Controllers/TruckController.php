@@ -39,8 +39,8 @@ class TruckController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'truck_number'=>'required',
-            'no_of_items'=>'required',
+            'truck_number'=>'required|unique:trucks',
+            'no_of_items',
             'postman_name'=>'required',
             'date_of_operation'=>'required',
             'status'=>'required'
@@ -90,8 +90,8 @@ class TruckController extends Controller
     public function update(Request $request, $truck_id)
     {
         $request->validate([
-            'truck_number'=>'required',
-            'no_of_items'=>'required',
+            'truck_number'=>'required|unique:trucks',
+            'no_of_items',
             'postman_name'=>'required',
             'date_of_operation'=>'required',
             'status'=>'required'
