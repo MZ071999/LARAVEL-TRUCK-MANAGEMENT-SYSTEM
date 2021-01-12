@@ -39,7 +39,7 @@ class PackageController extends Controller
         //Validate
         $request->validate([
             'truck_number' => 'required',
-            'package_number' => 'required',
+            'package_number' => 'required|unique:packages',
             'destination' => 'required',
             'date_of_operation' => 'required'
         ]);
@@ -49,7 +49,7 @@ class PackageController extends Controller
             'destination' => $request->destination,
             'date_of_operation' => $request->date_of_operation
         ]);
-        return redirect('/package/' .$package->package_id);
+        return redirect('package');
        
     }
 
@@ -88,7 +88,7 @@ class PackageController extends Controller
         //validate
         $request->validate([
             'truck_number' => 'required',
-            'package_number' => 'required',
+            'package_number' => 'required|unique:packages',
             'destination' => 'required',
             'date_of_operation' => 'required'
         ]);
