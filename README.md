@@ -58,7 +58,7 @@ Truck Page contains details about the truck data and is the main page of this sy
   * Assign package into a truck
   
 - Features and Functionalities:
-  * If a package is assigned to a specific truck on the item table, it will be updated automatically on the truck table as well
+  * When a package is assigned to a specific truck, it will be updated automatically on the truck table as well
   
 <br />
   
