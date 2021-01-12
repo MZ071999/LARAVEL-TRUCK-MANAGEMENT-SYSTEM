@@ -16,7 +16,7 @@ class CreatePackagesTable extends Migration
         Schema::create('packages', function (Blueprint $table) {
             $table->increments('package_id');
             $table->string('truck_number');
-            $table->string('package_number');
+            $table->string('package_number')->unique();
             $table->string('destination');
             $table->date('date_of_operation');
             $table->timestamps();
