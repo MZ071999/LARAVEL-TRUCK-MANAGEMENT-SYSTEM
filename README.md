@@ -54,7 +54,7 @@ Truck Page contains details about the truck data and is the main page of this sy
 
 - :man: Admin can:
   * Perform CRUD operation on package table
-  * Add new Package/ Edit some item on the Package/ Update it/ Delete item from the Package table
+  * Add new Package/ Edit some item on the Package/ Update it/ Delete shipped item from the Package table
   * Assign package into a truck
   
 - Features and Functionalities:
