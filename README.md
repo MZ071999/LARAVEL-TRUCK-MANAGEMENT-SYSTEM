@@ -25,23 +25,28 @@ With simple and easy to understand UI, Parcel Management System will help system
 
 :pushpin: Admin first logged into the system. There will be authentication involved. If Admin has not register yet, Admin can click on the 'register' button to register first. <br />
 
-:pushpin: Once logged in, Admin is greeted by the home page where there are three options to choose: Truck, Package, Postmen. Admin can click one of the option to see details about each option <br />
+:pushpin: Once logged in, Admin is greeted by the home page where there are three options to choose: Truck, Package, Postmen. Admin can click one of the option to see further details about each option <br />
 
 :pushpin: Truck Page :truck: <br />
-Truck Page contains details about the truck data.
+Truck Page contains details about the truck data and is the main page of this system.
 
-- :man: Admin can: <br/>
+- :man: Admin CAN: <br/>
   * Perform CRUD operation on truck table
   * Add new Truck/ Edit some item on the truck/ Update it/ Delete item from the truck table
 
 - Features:
-  * Truck display table on index page will display the following columns: truck number, quantity (how many items are load into the truck), postman in charge (which postman is going to drive the truck and deliver packages on that particular date), date of operation, and status.   
+  * Truck display table on index page will display the following columns: truck number, quantity (how many items are loaded into the truck), postman in charge (which postman is going to drive the truck and deliver packages on that particular date), date of operation, and status (whether the space inside the truck is available or not).   
+  * Admin can click on truck number to view a readonly details of the truck
+  * Admin can click on quantity to view a readonly list of every packages that are assigned to that specific truck. The details are package number and destination address.
 
 - Functionalities:
-  * One truck can load a maximum of 50 items in a day delivery.
+  * One truck can load a maximum of 50 items in a day.
   * A message prompt "FULL" will be displayed if a truck has reached maximum limit (when truck's quantity had reached 50 items).
   * A message prompt "AVAILABLE" will be displayed if a truck can load more items (when truck's quantity is less than 50 items).
-  * In the edit page, there will be a message displayed indicating how many more packages can be load into the truck
+  * In the edit page, on the 'quantity' label, there will be a message displayed indicating how many more packages can be load into the truck. if the truck currently have 25 packages, the message will be "25 more items can be loaded"
+  
+- :man: Admin CAN'T: <br/>
+  * Assign new package into the truck. Assigning new package into a truck can only happen from the Package page. 
   
 <br />
 
@@ -50,19 +55,21 @@ Truck Page contains details about the truck data.
 - :man: Admin can:
   * Perform CRUD operation on package table
   * Add new Package/ Edit some item on the Package/ Update it/ Delete item from the Package table
+  * Assign package into a truck
   
-- Features:
-
-- Functionalities:
-  * If an item is assigned to specific truck on the item table, it will be updated automatically on the truck table as well
+- Features and Functionalities:
+  * If a package is assigned to a specific truck on the item table, it will be updated automatically on the truck table as well
   
 <br />
   
-:pushpin: Postman Page :postman:
+:pushpin: Postman Page :post:
 
 - :man: Admin can:
   * Perform CRUD operation on Postman table
   * Add new Postman/ Edit some item on the Postman/ Update it/ Delete item from the Postman table
+  
+- Features and Functionalities;
+  * When a new postman is added and is assigned to a specific truck, data inside truck table will be automatically updated as well
 
 ---
 
