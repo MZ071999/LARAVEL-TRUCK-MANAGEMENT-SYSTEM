@@ -27,7 +27,7 @@
         </tr>
     </thead>
     <tbody>
-    @foreach($package as $count => $package)
+    @foreach($packages as $count => $package)
         <tr>
             <td>{{++$count}}</td>
             <td><a href="{{ route('package.show',$package->package_id)}}">{{$package->truck_number}}</a></td>

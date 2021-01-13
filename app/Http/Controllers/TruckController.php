@@ -18,8 +18,8 @@ class TruckController extends Controller
     public function index()
     {
         $trucks = Truck::all();
-        $package = Package::all('package_number');
-        return view('truck.index', compact('trucks'))->with('package_number', $package);
+        $packages = Package::all('package_number');
+        return view('truck.index', compact('trucks'))->with('package_number', $packages);
     }
 
     /**
@@ -67,8 +67,8 @@ class TruckController extends Controller
     public function show($truck_id)
     {
         $trucks = Truck::find($truck_id);
-        $package = Package::all('package_number');
-        return view('truck.show', compact('trucks'))->with('package_number', $package);
+        $packages = Package::all('package_number');
+        return view('truck.show', compact('trucks'))->with('package_number', $packages);
     }
 
     /**
@@ -93,7 +93,7 @@ class TruckController extends Controller
     public function update(Request $request, $truck_id)
     {
         $request->validate([
-            'truck_number'=>'required|unique:trucks',
+            'truck_number'=>'required|unique:trucks,truck_id',
             'no_of_items',
             'postman_name'=>'required',
             'date_of_operation'=>'required',

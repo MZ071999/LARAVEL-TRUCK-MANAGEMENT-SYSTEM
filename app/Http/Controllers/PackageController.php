@@ -6,6 +6,8 @@ use App\Models\Package;
 use Illuminate\Http\Request;
 use App\Models\Truck;
 
+const PACKAGE = '/package';
+
 class PackageController extends Controller
 {
     /**
@@ -15,8 +17,8 @@ class PackageController extends Controller
      */
     public function index()
     {
-        $package = Package::all();
-        return view('package.index', compact('package', $package));
+        $packages = Package::all();
+        return view('package.index', compact('packages'));
     }
 
     /**
@@ -45,13 +47,14 @@ class PackageController extends Controller
             'destination' => 'required',
             'date_of_operation' => 'required'
         ]);
-        $package = Package::create([
+        $packages = new Package([
             'truck_number' => $request->truck_number,
             'package_number' => $request->package_number,
             'destination' => $request->destination,
             'date_of_operation' => $request->date_of_operation
         ]);
-        return redirect('package');
+        $packages->save();
+        return redirect(PACKAGE)->with('success', 'Package Details Saved!');
        
     }
 
@@ -61,9 +64,10 @@ class PackageController extends Controller
      * @param  \App\Models\Package  $package
      * @return \Illuminate\Http\Response
      */
-    public function show(Package $package)
+    public function show($package_id)
     {
-        return view('package.show', compact('package', $package));
+        $packages = Package::find($package_id);
+        return view('package.show', compact('packages'));
     }
 
     /**
@@ -72,10 +76,11 @@ class PackageController extends Controller
      * @param  \App\Models\Package  $package
      * @return \Illuminate\Http\Response
      */
-    public function edit(Package $package)
+    public function edit($package_id)
     {
-        
-        return view('package.edit', compact('package', $package));
+        $trucks = Truck::all('truck_number');
+        $packages = Package::find($package_id);
+        return view('package.edit', compact('packages'))->with('truck_number', $trucks);
     }
 
     /**
@@ -85,22 +90,22 @@ class PackageController extends Controller
      * @param  \App\Models\Package  $package
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Package $package)
+    public function update(Request $request, $package_id)
     {
         //validate
         $request->validate([
             'truck_number' => 'required',
-            'package_number' => 'required|unique:packages',
+            'package_number' => 'required|unique:packages,package_id',
             'destination' => 'required',
             'date_of_operation' => 'required'
         ]);
-        $package->truck_number = $request->truck_number;
-        $package->package_number = $request->package_number;
-        $package->destination = $request->destination;
-        $package->date_of_operation = $request->date_of_operation;
-        $package->save();
-        $request->session()->flash('message', 'Sucessfully update package');
-        return redirect('package');
+        $packages = Package::find($package_id);
+        $packages->truck_number = $request->get('truck_number');
+        $packages->package_number = $request->get('package_number');
+        $packages->destination = $request->get('destination');
+        $packages->date_of_operation = $request->get('date_of_operation');
+        $packages->save();
+        return redirect(PACKAGE)->with('success', 'Package Updated!');
     }
 
     /**
@@ -109,10 +114,10 @@ class PackageController extends Controller
      * @param  \App\Models\Package  $package
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, Package $package)
+    public function destroy($package_id)
     {
-        $package->delete();
-        $request->session()->flash('message', 'Sucessfully delete package');
-        return redirect('package');
+        $packages = Package::find($package_id);
+        $packages->delete();
+        return redirect(PACKAGE)->with('success', 'Package Deleted!');
     }
 }

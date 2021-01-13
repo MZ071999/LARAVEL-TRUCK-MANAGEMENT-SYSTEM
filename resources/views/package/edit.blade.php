@@ -15,24 +15,28 @@
         </div>
         <br /> 
         @endif
-        <form method="post" action="{{ route('package.update', $package->package_id) }}">
+        <form method="post" action="{{ route('package.update', $packages->package_id) }}">
             @method('PATCH') 
             @csrf
-            <div class="form-group">
-                <label for="truck_number">Truck Number</label>
-                <input type="text" class="form-control" name="truck_number" value="{{ $package->truck_number }}">
+            <div class="form-group">    
+              <label for="truck_number">Truck Number</label>
+              <select name="truck_number" class="form-control">
+              @foreach ($truck_number as $number)
+                  <option value="{{$number['truck_number']}}">{{$number['truck_number']}}</option>
+              @endforeach
+              </select>
             </div>
             <div class="form-group">
                 <label for="package_number">Package Number</label>
-                <input type="text" class="form-control" name="package_number" value="{{ $package->package_number }}">
+                <input type="text" class="form-control" name="package_number" value="{{ $packages->package_number }}">
             </div>
             <div class="form-group">
                 <label for="destination">Destination</label>
-                <input type="text" class="form-control" name="destination" value="{{ $package->destination }}">
+                <input type="text" class="form-control" name="destination" value="{{ $packages->destination }}">
             </div>
             <div class="form-group">
                 <label for="date_of_operation">Date of Operation</label>
-                <input type="text" class="form-control" name="date_of_operation" value="{{ $package->date_of_operation }}">
+                <input type="text" class="form-control" name="date_of_operation" value="{{ $packages->date_of_operation }}">
             </div>
             <div class="text-center">
             <a href="{{ route('package.index')}}" class="btn btn-primary bg-danger">Return</a>&nbsp;&nbsp;    
