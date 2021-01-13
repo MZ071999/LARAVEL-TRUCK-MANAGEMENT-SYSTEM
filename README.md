@@ -36,13 +36,13 @@ Truck Page contains details about the truck data and is the main page of this sy
 
 - Features:
   * Truck display table on index page will display the following columns: truck number, quantity (how many items are loaded into the truck), postman in charge (which postman is going to drive the truck and deliver packages on that particular date), date of operation, and status (whether the space inside the truck is available or not).   
-  * Admin can click on truck number to view a readonly details of the truck
-  * Admin can click on quantity to view a readonly list of every packages that are assigned to that specific truck. The details are package number and destination address.
+  * Admin can click on truck number to view a readonly details of the truck 
+  * Admin can click on quantity to view a readonly list of every packages that are assigned to that specific truck. The details are package number and destination address. -> Hafiz
 
 - Functionalities:
   * One truck can load a maximum of 50 items in a day.
-  * A message prompt "FULL" will be displayed if a truck has reached maximum limit (when truck's quantity had reached 50 items).
-  * A message prompt "AVAILABLE" will be displayed if a truck can load more items (when truck's quantity is less than 50 items).
+  * A message prompt "FULL" will be displayed if a truck has reached maximum limit (when truck's quantity had reached 50 items). -> Nada
+  * A message prompt "AVAILABLE" will be displayed if a truck can load more items (when truck's quantity is less than 50 items). -> Nada
   * In the edit page, on the 'quantity' label, there will be a message displayed indicating how many more packages can be load into the truck. if the truck currently have 25 packages, the message will be "25 more items can be loaded"
   
 - :man: Admin CAN'T: <br/>
@@ -76,7 +76,7 @@ Truck Page contains details about the truck data and is the main page of this sy
 ## Views, Controllers, Routes, Models
 
 #### :scroll: Views
-- :file_folder: auth
+- :file_folder: auth -> Mufida
     * :file_folder: passwords
         * confirm.blade.php
         * email.blade.php
@@ -84,20 +84,20 @@ Truck Page contains details about the truck data and is the main page of this sy
   * login.blade.php
   * register.blade.php
   * verify.blade.php
-- :file_folder: layouts
+- :file_folder: layouts -> Mufida
   * app.blade.php
-- :file_folder: posts
-- :file_folder: truck
+- :file_folder: posts 
+- :file_folder: truck -> Mufida
   * create.blade.php
   * edit.blade.php
   * index.blade.php
   * show.blade.php
-- :file_folder: package
+- :file_folder: package -> Hafiz
   * create.blade.php
   * edit.blade.php
   * index.blade.php
   * show.blade.php
-- :file_folder: postman
+- :file_folder: postman -> Nada
   * create.blade.php
   * edit.blade.php
   * index.blade.php
@@ -107,19 +107,19 @@ Truck Page contains details about the truck data and is the main page of this sy
 #### :hammer: Controllers
 - :file_folder: Auth
 - HomeController
-- TruckController
+- TruckController -> Mufida
   * index()
   * store ()
   * show ()
   * update ()
   * destroy ()
-- PackageController
+- PackageController -> Hafiz
   * index()
   * store ()
   * show ()
   * update ()
   * destroy ()
-- PostmanController
+- PostmanController -> Nada
   * index()
   * store ()
   * show ()
@@ -133,12 +133,28 @@ Truck Page contains details about the truck data and is the main page of this sy
 
 #### :books: Models
 - User
-- Table
-- Package
-- Postman
+- Truck -> Mufida
+- Package -> Hafiz
+- Postman -> Nada
 
 ---
+## Work Division Overview:
 
+- Mufida:
+  * Unique Validation on all tables
+  * Overall Project overview
+  * User Authentication and registration
+  * CRUD operation on Truck table
+- Hafiz:
+  * Display item list on truck table when admin click on 'quantity'
+  * Sequence Diagram
+  * CRUD operation on Package table
+  * Welcome page
+- Nada:
+  * Display FULL when truck quantity is 50. Display AVAILABLE when truck quantity is less than 50
+  * CRUD operation on Postman table
+  * ERD Diagram
+---
 ## ERD
 
 ---
