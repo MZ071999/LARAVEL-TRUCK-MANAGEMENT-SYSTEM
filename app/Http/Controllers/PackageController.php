@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Package;
 use Illuminate\Http\Request;
+use App\Models\Truck;
 
 class PackageController extends Controller
 {
@@ -25,7 +26,8 @@ class PackageController extends Controller
      */
     public function create()
     {
-        return view('package.create');
+        $trucks = Truck::all('truck_number');
+        return view('package.create')->with('truck_number', $trucks);
     }
 
     /**

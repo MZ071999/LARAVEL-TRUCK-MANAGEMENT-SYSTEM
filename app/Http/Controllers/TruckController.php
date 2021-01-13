@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Truck;
+use App\Models\Package;
 
 const TRUCK = '/truck';
 
@@ -17,7 +18,8 @@ class TruckController extends Controller
     public function index()
     {
         $trucks = Truck::all();
-        return view('truck.index', compact('trucks'));
+        $package = Package::all('package_number');
+        return view('truck.index', compact('trucks'))->with('package_number', $package);
     }
 
     /**
@@ -47,7 +49,7 @@ class TruckController extends Controller
         ]);
         $trucks = new Truck([
             'truck_number' => $request->get('truck_number'),
-            'no_of_items' => $request->get('no_of_items'),
+            'no_of_items',
             'postman_name' => $request->get('postman_name'),
             'date_of_operation' => $request->get('date_of_operation'),
             'status' => $request->get('status')
@@ -65,7 +67,8 @@ class TruckController extends Controller
     public function show($truck_id)
     {
         $trucks = Truck::find($truck_id);
-        return view('truck.show', compact('trucks'));
+        $package = Package::all('package_number');
+        return view('truck.show', compact('trucks'))->with('package_number', $package);
     }
 
     /**

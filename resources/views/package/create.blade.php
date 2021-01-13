@@ -18,8 +18,10 @@
       <form method="post" action="{{ route('package.store') }}">
           @csrf
           <div class="form-group">    
-              <label for="truck_number">Truck Number </label>
-              <input type="text" class="form-control" name="truck_number"/>
+              <label for="truck_number">Truck Number</label>
+              <select name="truck_number" class="form-control">
+              <option> 10 </option>
+              </select>
           </div>
           <div class="form-group">
               <label for="package_name">Package Number</label>

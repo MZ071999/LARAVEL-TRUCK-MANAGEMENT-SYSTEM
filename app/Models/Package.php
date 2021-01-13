@@ -13,7 +13,7 @@ class Package extends Model
     protected $fillable = ['truck_number', 'package_number', 'destination', 'date_of_operation'];
     
      public function Truck(){
-        return $this->belongsTo(Truck::class, 'truck_number');
+        return $this->belongsTo(Truck::class);
     }
 
 }
