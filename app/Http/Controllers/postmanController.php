@@ -38,7 +38,7 @@ class postmanController extends Controller
     {
         $request->validate([
             'truck_number'=>'required',
-            'postman_number'=>'required',
+            'postman_number'=>'required|unique:postmen',
             'postman_name'=>'required',
             'date_of_operation'=>'required'
         ]);
@@ -86,7 +86,7 @@ class postmanController extends Controller
     {
         $request->validate([
             'truck_number'=>'required',
-            'postman_number'=>'required',
+            'postman_number'=>'required|unique:postmen',
             'postman_name'=>'required',
             'date_of_operation'=>'required'
         ]);
