@@ -23,7 +23,7 @@
           </div>
           <div class="form-group">
               <label for="no_of_items">Quantity</label>
-              <input type="number" class="form-control" name="no_of_items"/>
+              <input type="number" class="form-control" name="no_of_items" placeholder="x more items can be loaded" readonly/>
           </div>
           <div class="form-group">
               <label for="postman_name">Postman in Charge</label>
