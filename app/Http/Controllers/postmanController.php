@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\postman;
 use Illuminate\Http\Request;
+use App\Models\Truck;
 
 class postmanController extends Controller
 {
@@ -25,7 +26,8 @@ class postmanController extends Controller
      */
     public function create()
     {
-        return view('postman.create');
+        $trucks = Truck::all('truck_number');
+        return view('postman.create')->with('truck_number', $trucks);
     }
 
     /**
@@ -71,8 +73,8 @@ class postmanController extends Controller
      */
     public function edit(postman $postman)
     {
-        
-        return view('postman.edit', compact('postman', $postman));  
+        $trucks = Truck::all('truck_number');
+        return view('postman.edit', compact('postman', $postman))->with('truck_number', $trucks);
     }
 
     /**
@@ -86,7 +88,7 @@ class postmanController extends Controller
     {
         $request->validate([
             'truck_number'=>'required',
-            'postman_number'=>'required|unique:postmen',
+            'postman_number'=>'required|unique:postmen,postman_id',
             'postman_name'=>'required',
             'date_of_operation'=>'required'
         ]);
