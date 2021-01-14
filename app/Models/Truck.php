@@ -18,7 +18,7 @@ class Truck extends Model
 
      public function postman()
     {
-        return $this->hasOne(postman::class);
+        return $this->hasOne(postman::class, 'truck_number', 'truck_number');
     }
 
 }

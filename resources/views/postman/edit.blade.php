@@ -21,7 +21,11 @@
             @csrf
             <div class="form-group">
                 <label for="truck_number">Truck Number</label>
-                <input type="text" value="{{$postman->truck_number}}" class="form-control" id="truck_number" name="truck_number">
+                <select name="truck_number" class="form-control">
+              @foreach ($truck_number as $number)
+                  <option value="{{$number['truck_number']}}">{{$number['truck_number']}}</option>
+              @endforeach
+              </select>
             </div>
             <div class="form-group">
                 <label for="postman_number">Postman Number</label>

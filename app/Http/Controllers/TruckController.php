@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Truck;
 use App\Models\Package;
+use App\Models\postman;
 
 const TRUCK = '/truck';
 
@@ -45,7 +46,7 @@ class TruckController extends Controller
             'no_of_items',
             'postman_name'=>'required',
             'date_of_operation'=>'required',
-            'status'=>'required'
+            'status'
         ]);
         $trucks = new Truck([
             'truck_number' => $request->get('truck_number'),
@@ -80,7 +81,8 @@ class TruckController extends Controller
     public function edit($truck_id)
     {
         $trucks = Truck::find($truck_id);
-        return view('truck.edit', compact('trucks'));  
+        $postmen = postman::all();
+        return view('truck.edit', compact('trucks'))->with(compact('postmen'));  
     }
 
     /**
@@ -97,11 +99,11 @@ class TruckController extends Controller
             'no_of_items',
             'postman_name'=>'required',
             'date_of_operation'=>'required',
-            'status'=>'required'
+            'status'
         ]);
         $trucks = Truck::find($truck_id);
         $trucks->truck_number =  $request->get('truck_number');
-        $trucks->no_of_items = $request->get('no_of_items');
+        $trucks->no_of_items = null;
         $trucks->postman_name = $request->get('postman_name');
         $trucks->date_of_operation = $request->get('date_of_operation');
         $trucks->status = $request->get('status');
