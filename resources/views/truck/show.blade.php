@@ -25,6 +25,10 @@
                 <input type="text" class="form-control" name="no_of_items" value="{{$trucks->Package()->count()}} packages" readonly>
             </div>
             <div class="form-group">
+                <label>Available for: </label>
+                <input type="text" class="form-control" value="{{50-($trucks->Package()->count())}} more packages" readonly>
+            </div>
+            <div class="form-group">
                 <label for="postman_name">Postman in Charge</label>
                 <input type="text" class="form-control" name="postman_name" value="{{ $trucks->postman_name }}" readonly>
             </div>

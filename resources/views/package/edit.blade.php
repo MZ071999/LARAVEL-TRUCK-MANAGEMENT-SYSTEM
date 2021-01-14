@@ -18,8 +18,12 @@
         <form method="post" action="{{ route('package.update', $packages->package_id) }}">
             @method('PATCH') 
             @csrf
+            <div class="form-group">
+                <label for="package_number">Truck Number</label>
+                <input type="text" class="form-control" name="truck_number" value="{{ $packages->truck_number }}" readonly>
+            </div>
             <div class="form-group">    
-              <label for="truck_number">Truck Number</label>
+              <label for="truck_number">Select New Truck Number: </label>
               <select name="truck_number" class="form-control">
               @foreach ($truck_number as $number)
                   <option value="{{$number['truck_number']}}">{{$number['truck_number']}}</option>
