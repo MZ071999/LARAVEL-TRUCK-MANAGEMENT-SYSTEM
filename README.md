@@ -103,6 +103,7 @@ Truck Page contains details about the truck data and is the main page of this sy
   * index.blade.php
   * show.blade.php
 - home.blade.php
+- welcome.blade.php
 
 #### :hammer: Controllers
 - :file_folder: Auth
@@ -151,7 +152,7 @@ Truck Page contains details about the truck data and is the main page of this sy
   * Display item details on truck table when admin click on 'quantity' (item details contain item number and item address)
   * Sequence Diagram
   * CRUD operation on Package table
-  * Welcome page
+  * `Welcome.blade.php` page
   * Define relationship between truck table and package table
 - Nada:
   * Display FULL when truck quantity is 50. 
