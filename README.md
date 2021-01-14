@@ -148,7 +148,7 @@ Truck Page contains details about the truck data and is the main page of this sy
   * Automatically update truck number on `Package/create.blade.php`'s dropdown list
   * Update Quantity on Truck/index.blade.php everytime a new package is assigned to a specific truck.
 - Hafiz:
-  * Display item list on truck table when admin click on 'quantity'
+  * Display item details on truck table when admin click on 'quantity' (item details contain item number and item address)
   * Sequence Diagram
   * CRUD operation on Package table
   * Welcome page
