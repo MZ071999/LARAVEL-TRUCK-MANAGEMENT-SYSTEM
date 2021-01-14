@@ -23,7 +23,7 @@
           </div>
           <div class="form-group">
               <label for="no_of_items">Quantity</label>
-              <input type="number" class="form-control" name="no_of_items" placeholder="0" readonly/>
+              <input type="number" class="form-control" name="no_of_items" placeholder="No package assigned yet" readonly/>
           </div>
           <div class="form-group">
               <label for="postman_name">Postman in Charge</label>

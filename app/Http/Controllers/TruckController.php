@@ -49,7 +49,7 @@ class TruckController extends Controller
         ]);
         $trucks = new Truck([
             'truck_number' => $request->get('truck_number'),
-            'no_of_items',
+            'no_of_items' => $request->get('no_of_items'),
             'postman_name' => $request->get('postman_name'),
             'date_of_operation' => $request->get('date_of_operation'),
             'status' => $request->get('status')

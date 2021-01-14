@@ -32,7 +32,7 @@
         <tr>
             <td>{{++$count}}</td>
             <td><a href="{{ route('truck.show',$truck->truck_id)}}">{{$truck->truck_number}}</a></td>
-            <td>{{$package_number->count()}}</td>
+            <td>{{$truck->Package()->count()}}</td>
             <td>{{$truck->postman_name}}</td>
             <td>{{$truck->date_of_operation}}</td>
             <td>{{$truck->status}}</td>

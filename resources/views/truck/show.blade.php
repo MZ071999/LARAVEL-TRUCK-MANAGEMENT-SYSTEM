@@ -14,6 +14,7 @@
             </ul>
         </div>
         <br /> 
+        <!-- {{$package_number->count()}} -->
         @endif
             <div class="form-group">
                 <label for="truck_number">Truck Number</label>
@@ -21,7 +22,7 @@
             </div>
             <div class="form-group">
                 <label for="no_of_items">Quantity</label>
-                <input type="text" class="form-control" name="no_of_items" value="{{$package_number->count()}} packages" readonly>
+                <input type="text" class="form-control" name="no_of_items" value="{{$trucks->Package()->count()}} packages" readonly>
             </div>
             <div class="form-group">
                 <label for="postman_name">Postman in Charge</label>
