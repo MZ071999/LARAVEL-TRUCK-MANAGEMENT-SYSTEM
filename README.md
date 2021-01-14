@@ -145,13 +145,17 @@ Truck Page contains details about the truck data and is the main page of this sy
   * Overall Project overview
   * User Authentication and registration
   * CRUD operation on Truck table
+  * Update truck number on Package/create.blade.php dropdown list
+  * Update Quantity on Truck/index.blade.php everytime a new package is assigned to a specific truck.
 - Hafiz:
   * Display item list on truck table when admin click on 'quantity'
   * Sequence Diagram
   * CRUD operation on Package table
   * Welcome page
+  * Define relationship between truck table and package table
 - Nada:
-  * Display FULL when truck quantity is 50. Display AVAILABLE when truck quantity is less than 50
+  * Display FULL when truck quantity is 50. 
+  * Display AVAILABLE when truck quantity is less than 50
   * CRUD operation on Postman table
   * ERD Diagram
 ---
