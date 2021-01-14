@@ -141,11 +141,11 @@ Truck Page contains details about the truck data and is the main page of this sy
 ## Work Division Overview:
 
 - Mufida:
-  * Unique Validation on all tables
+  * Unique value Validation on all tables
   * Overall Project overview
   * User Authentication and registration
   * CRUD operation on Truck table
-  * Update truck number on Package/create.blade.php dropdown list
+  * Automatically update truck number on `Package/create.blade.php`'s dropdown list
   * Update Quantity on Truck/index.blade.php everytime a new package is assigned to a specific truck.
 - Hafiz:
   * Display item list on truck table when admin click on 'quantity'
