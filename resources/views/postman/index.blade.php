@@ -30,8 +30,8 @@
             @foreach($postman as $count => $postman)
             <tr>
                     <td>{{++$count}}</td>
-                    <td><a href="{{ route('postman.show',$postman->postman_id)}}">{{$postman->truck_number}}</a></td>
-                    <td>{{$postman->postman_number}}</td>
+                    <td>{{$postman->truck_number}}</td>
+                    <td><a href="{{ route('postman.show',$postman->postman_id)}}">{{$postman->postman_number}}</a></td>
                     <td>{{$postman->postman_name}}</td>
                     @if($postman->truck_number != '-')
                       <td class="table-success"> ASSIGNED </td>

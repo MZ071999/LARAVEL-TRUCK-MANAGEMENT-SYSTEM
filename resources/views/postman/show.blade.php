@@ -28,8 +28,13 @@
                 <input type="text" class="form-control" name="postman_name" value="{{ $postman->postman_name }}" readonly>
             </div>
             <div class="form-group">
-                <label for="date_of_operation">Date of Operation</label>
-                <input type="text" class="form-control" name="date_of_operation" value="{{ $postman->date_of_operation }}" readonly>
+                <label for="date_of_operation">Status</label>
+                @if($postman->truck_number != '-')
+                <input type="text" class="form-control" name="date_of_operation" value="ASSIGNED" readonly>
+                    @else
+                
+                    <input type="text" class="form-control" name="date_of_operation" value="NOT ASSIGNED" readonly>
+                    @endif
             </div>
             </form>
             <div class="text-center">
