@@ -40,10 +40,6 @@
                 <label for="destination">Destination</label>
                 <input type="text" class="form-control" name="destination" value="{{ $packages->destination }}">
             </div>
-            <div class="form-group">
-                <label for="date_of_operation">Date of Operation</label>
-                <input type="text" class="form-control" name="date_of_operation" value="{{ $packages->date_of_operation }}">
-            </div>
             <div class="text-center">
             <a href="{{ route('package.index')}}" class="btn btn-primary bg-danger">Return</a>&nbsp;&nbsp;    
             <button type="submit" class="btn btn-primary bg-success">Update Details</button>

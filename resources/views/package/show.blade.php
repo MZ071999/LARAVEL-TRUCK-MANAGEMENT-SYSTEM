@@ -27,10 +27,6 @@
                 <label for="destination">Destination</label>
                 <input type="text" class="form-control" name="destination" value="{{ $packages->destination }}" readonly>
             </div>
-            <div class="form-group">
-                <label for="date_of_operation">Date of Operation</label>
-                <input type="text" class="form-control" name="date_of_operation" value="{{ $packages->date_of_operation }}" readonly>
-            </div>
             </form>
             <div class="text-center">
             <a href="{{ route('package.index')}}" class="btn btn-primary">Return</a>&nbsp;&nbsp;    

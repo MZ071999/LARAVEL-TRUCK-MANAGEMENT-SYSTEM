@@ -19,7 +19,6 @@ class CreatePackagesTable extends Migration
             $table->foreign('truck_number')->references('truck_number')->on('trucks');
             $table->string('package_number')->unique();
             $table->string('destination');
-            $table->date('date_of_operation');
             $table->timestamps();
         });
        

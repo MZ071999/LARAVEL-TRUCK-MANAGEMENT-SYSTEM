@@ -26,7 +26,6 @@
           <th>Truck Number</th>
           <th>Package Number</th>
           <th>Destination</th>
-          <th>Operation Date</th>
           <th colspan="2" class="text-center">Actions</th>
         </tr>
     </thead>
@@ -37,7 +36,6 @@
             <td><a href="{{ route('package.show',$package->package_id)}}">{{$package->truck_number}}</a></td>
             <td>{{$package->package_number}}</td>
             <td>{{$package->destination}}</td>
-            <td>{{$package->date_of_operation}}</td>
             <td class="text-center">
                 <a href="{{ route('package.edit',$package->package_id)}}" class="btn btn-primary btn-block">Edit</a>
             </td>

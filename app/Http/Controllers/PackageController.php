@@ -44,14 +44,12 @@ class PackageController extends Controller
         $request->validate([
             'truck_number' => 'required',
             'package_number' => 'required|unique:packages',
-            'destination' => 'required',
-            'date_of_operation' => 'required'
+            'destination' => 'required'
         ]);
         $packages = new Package([
             'truck_number' => $request->truck_number,
             'package_number' => $request->package_number,
-            'destination' => $request->destination,
-            'date_of_operation' => $request->date_of_operation
+            'destination' => $request->destination
         ]);
         $packages->save();
         return redirect(PACKAGE)->with('success', 'Package Details Saved!');
@@ -96,14 +94,12 @@ class PackageController extends Controller
         $request->validate([
             'truck_number' => 'required',
             'package_number' => 'required|unique:packages,package_id',
-            'destination' => 'required',
-            'date_of_operation' => 'required'
+            'destination' => 'required'
         ]);
         $packages = Package::find($package_id);
         $packages->truck_number = $request->get('truck_number');
         $packages->package_number = $request->get('package_number');
         $packages->destination = $request->get('destination');
-        $packages->date_of_operation = $request->get('date_of_operation');
         $packages->save();
         return redirect(PACKAGE)->with('success', 'Package Updated!');
     }
