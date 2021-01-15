@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('content')
-
+<style>
+.w-5{
+  display: none;
+}
+</style>
 <div class="row">
 
 <div class="col-sm-12">
@@ -30,7 +34,7 @@
     <tbody>
     @foreach($trucks as $count => $truck)
         <tr>
-            <td>{{++$count}}</td>
+            <td>{{$trucks->firstItem()+ $count}}</td>
             <td><a href="{{ route('truck.show',$truck->truck_id)}}">{{$truck->truck_number}}</a></td>
             <td>{{$truck->Package()->count()}}</a></td>
             <td>{{$truck->postman_name}}</td>
@@ -54,6 +58,9 @@
         @endforeach
     </tbody>
   </table>
+  <span>
+  {{$trucks->links("pagination::bootstrap-4")}}
+  </span>
   <div class="text-center">
     <a style="margin: 19px;" href="{{ route('truck.create')}}" class="btn btn-primary bg-success">New Truck Details</a>
   </div>

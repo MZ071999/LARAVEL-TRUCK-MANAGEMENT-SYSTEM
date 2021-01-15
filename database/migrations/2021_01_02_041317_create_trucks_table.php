@@ -16,7 +16,7 @@ class CreateTrucksTable extends Migration
         Schema::create('trucks', function (Blueprint $table) {
             $table->increments('truck_id');
             $table->string('truck_number')->unique();
-            $table->string('postman_name');
+            $table->string('postman_name')->nullable();
             $table->date('date_of_operation');
             $table->string('status')->nullable();
             $table->timestamps();

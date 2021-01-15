@@ -18,7 +18,7 @@ class TruckController extends Controller
      */
     public function index()
     {
-        $trucks = Truck::all();
+        $trucks = Truck::paginate(5);
         $packages = Package::all('package_number');
         return view('truck.index', compact('trucks'))->with('package_number', $packages);
     }
@@ -43,7 +43,7 @@ class TruckController extends Controller
     {
         $request->validate([
             'truck_number'=>'required|unique:trucks',
-            'postman_name'=>'required',
+            'postman_name',
             'date_of_operation'=>'required',
             'status'
         ]);
@@ -94,7 +94,7 @@ class TruckController extends Controller
     {
         $request->validate([
             'truck_number'=>'required|unique:trucks,truck_id',
-            'postman_name'=>'required',
+            'postman_name',
             'date_of_operation'=>'required',
             'status'
         ]);
