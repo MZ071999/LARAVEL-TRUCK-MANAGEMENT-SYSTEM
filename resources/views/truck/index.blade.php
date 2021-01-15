@@ -32,13 +32,17 @@
         <tr>
             <td>{{++$count}}</td>
             <td><a href="{{ route('truck.show',$truck->truck_id)}}">{{$truck->truck_number}}</a></td>
-            <td>{{$truck->Package()->count()}}</td>
+            <td>{{$truck->Package()->count()}}</a></td>
             <td>{{$truck->postman_name}}</td>
             <td>{{$truck->date_of_operation}}</td>
             <td>{{$truck->status}}</td>
             <td class="text-center">
+              <a href="{{ route('detail.show',$truck->truck_id)}}" class="btn btn-secondary btn-block" >Item-list</a>
+          </td>
+            <td class="text-center">
                 <a href="{{ route('truck.edit',$truck->truck_id)}}" class="btn btn-primary btn-block">Edit</a>
             </td>
+            
             <td class="text-center">
                 <form action="{{ route('truck.destroy', $truck->truck_id)}}" method="post">
                   @csrf
