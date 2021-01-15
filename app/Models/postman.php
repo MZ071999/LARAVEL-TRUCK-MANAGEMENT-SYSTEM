@@ -11,7 +11,7 @@ class postman extends Model
     use HasFactory;
     protected $primaryKey = 'postman_id';
 
-    protected $fillable = ['truck_number','postman_number','postman_name','date_of_operation'];
+    protected $fillable = ['truck_number','postman_number','postman_name'];
 
     public function Truck(){
         return $this->belongsTo(Truck::class);

@@ -20,6 +20,7 @@
         <div class="form-group">   
             <label for="title">Truck Number</label>
             <select name="truck_number" class="form-control">
+            <option value="-">-</option>
               @foreach ($truck_number as $number)
                   <option value="{{$number['truck_number']}}">{{$number['truck_number']}}</option>
               @endforeach
@@ -32,10 +33,6 @@
         <div class="form-group">
             <label for="title">Postman Name</label>
             <input type="text" class="form-control" id="postman_name" name="postman_name">
-        </div>
-        <div class="form-group">
-            <label for="title">Operation Date</label>
-            <input type="date" class="form-control" id="date_of_operation" name="date_of_operation">
         </div>
 
         <div class="row justify-content-center">

@@ -22,7 +22,7 @@
               <th scope="col">Truck Number</th>
               <th scope="col">Postman number</th>
               <th scope="col">Postman name</th>
-              <th scope="col">Operation Date</th>
+              <th scope="col">Status</th>
               <th colspan="2" class="text-center">Actions</th>
             </tr>
         </thead>
@@ -33,7 +33,11 @@
                     <td><a href="{{ route('postman.show',$postman->postman_id)}}">{{$postman->truck_number}}</a></td>
                     <td>{{$postman->postman_number}}</td>
                     <td>{{$postman->postman_name}}</td>
-                    <td>{{$postman->date_of_operation}}</td>
+                    @if($postman->truck_number != '-')
+                      <td class="table-success"> ASSIGNED </td>
+                    @else
+                      <td class="table-danger"> NOT ASSIGNED </td>
+                    @endif
                     <td class="text-center">
                 <a href="{{ route('postman.edit',$postman->postman_id)}}" class="btn btn-primary btn-block">Edit</a>
             </td>

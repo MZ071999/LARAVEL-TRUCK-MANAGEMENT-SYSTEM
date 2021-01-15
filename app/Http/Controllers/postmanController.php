@@ -39,16 +39,14 @@ class postmanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'truck_number'=>'required',
+            'truck_number',
             'postman_number'=>'required|unique:postmen',
-            'postman_name'=>'required',
-            'date_of_operation'=>'required'
+            'postman_name'=>'required'
         ]);
         $postman = postman::create([
             'truck_number' => $request->truck_number,
             'postman_number' => $request->postman_number,
-            'postman_name' => $request->postman_name,
-            'date_of_operation' => $request->date_of_operation
+            'postman_name' => $request->postman_name
         ]);
         return redirect('postman');
 
@@ -87,15 +85,13 @@ class postmanController extends Controller
     public function update(Request $request, postman $postman)
     {
         $request->validate([
-            'truck_number'=>'required',
+            'truck_number',
             'postman_number'=>'required|unique:postmen,postman_id',
             'postman_name'=>'required',
-            'date_of_operation'=>'required'
         ]);
         $postman->truck_number =  $request->truck_number;
         $postman->postman_number = $request->postman_number;
         $postman->postman_name = $request->postman_name;
-        $postman->date_of_operation = $request->date_of_operation;
         $postman->save();
         $request->session()->flash('message', 'Sucessfully update postman');
         return redirect('postman');
