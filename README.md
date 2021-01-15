@@ -72,10 +72,11 @@ Truck Page contains details about the truck data and is the main page of this sy
 - :man: Admin can:
   * Perform CRUD operation on package table
   * Add new Package/ Edit some item on the Package/ Update it/ Delete shipped item from the Package table
-  * Assign package into a truck
+  * Assign new package into a specific truck_number
   
 - Features and Functionalities:
-  * When a package is assigned to a specific truck, it will be updated automatically on the truck table as well
+  * When a package is assigned into a specific truck_number, it will be updated automatically on the truck table as well
+  * truck_number with total quantity equal to 50 won't be displayed on the dropdown list for admin to choose
   
 <br />
   
