@@ -17,8 +17,8 @@
 </head>
 <body>
     <div class="container">
-        <h1> 404 Page not Found </h1>
-        <a href="{{url('home')}}"> Back to Home Page </a>
+        <h1 style="text-align:center"> 404 Page not Found </h1>
+        <a href="{{url('home')}}" style="text-align:center">  Back to Home Page </a>
     </div>
 </body>
 </html>
