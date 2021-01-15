@@ -102,6 +102,10 @@ Truck Page contains details about the truck data and is the main page of this sy
   * edit.blade.php
   * index.blade.php
   * show.blade.php
+- :file_folder: errors
+  * 404.blade.php
+  * 401.blade.php
+  * 419.blade.php
 - home.blade.php
 - welcome.blade.php
 
@@ -142,23 +146,40 @@ Truck Page contains details about the truck data and is the main page of this sy
 ## Work Division Overview:
 
 - Mufida:
+  * github readme.md
   * Unique value Validation on all tables
-  * Overall Project overview
+  * Pagination
   * User Authentication and registration
   * CRUD operation on Truck table
   * Automatically update truck number on `Package/create.blade.php`'s dropdown list
+  * Automatically update truck number on `Postman/create.blade.php`'s dropdown list
   * Update Quantity on Truck/index.blade.php everytime a new package is assigned to a specific truck.
+  * Truck Controller, Views, Routes, Model, Migration
+  * 404 Error page
 - Hafiz:
-  * Display item details on truck table when admin click on 'quantity' (item details contain item number and item address)
   * Sequence Diagram
+  * Display item details on truck table when admin click on 'quantity' (item details contain item number and item address)
+  * Automatically update postman name on `Truck/create.blade.php`'s dropdown list
   * CRUD operation on Package table
   * `Welcome.blade.php` page
   * Define relationship between truck table and package table
+  * Package Controller
+  * Package views
+  * Package Routes
+  * Package model
+  * Package migration
+  * 401 Error page
 - Nada:
+  * ERD Diagram
   * Display FULL when truck quantity is 50. 
   * Display AVAILABLE when truck quantity is less than 50
   * CRUD operation on Postman table
-  * ERD Diagram
+  * Postman Controller
+  * Postman views
+  * Postman Routes
+  * Postman model
+  * Postman migration
+  * 419 Error page
 ---
 ## ERD
 
