@@ -25,8 +25,10 @@
             <div class="form-group">    
               <label for="truck_number">Select New Truck Number: </label>
               <select name="truck_number" class="form-control">
-              @foreach ($truck_number as $number)
-                  <option value="{{$number['truck_number']}}">{{$number['truck_number']}}</option>
+              @foreach ($trucks as $count => $truck)
+                @if(($truck->Package()->count()) < 50)
+                  <option value="{{$truck['truck_number']}}">{{$truck['truck_number']}}</option>
+                @endif
               @endforeach
               </select>
             </div>

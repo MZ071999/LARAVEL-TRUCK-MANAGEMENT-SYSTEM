@@ -17,7 +17,7 @@ class PackageController extends Controller
      */
     public function index()
     {
-        $packages = Package::all();
+        $packages = Package::paginate(5);
         return view('package.index', compact('packages'));
     }
 
@@ -28,8 +28,8 @@ class PackageController extends Controller
      */
     public function create()
     {
-        $trucks = Truck::all('truck_number');
-        return view('package.create')->with('truck_number', $trucks);
+        $trucks = Truck::all();
+        return view('package.create')->with(compact('trucks'));
     }
 
     /**
@@ -78,9 +78,9 @@ class PackageController extends Controller
      */
     public function edit($package_id)
     {
-        $trucks = Truck::all('truck_number');
+        $trucks = Truck::all();
         $packages = Package::find($package_id);
-        return view('package.edit', compact('packages'))->with('truck_number', $trucks);
+        return view('package.edit', compact('packages'))->with(compact('trucks'));
     }
 
     /**
