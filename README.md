@@ -96,6 +96,8 @@ With simple and easy to understand UI, Parcel Management System will help system
 
 ## ERD
 
+![alt text](https://github.com/[MZ071999]/[WEBDEV_PROJECT]/blob/[master]/erd.jpg?raw=true)
+
 ---
 
 ## Sequence Diagram
