@@ -17,7 +17,7 @@
 
 <div class="col-sm-12">
 <br />
-<h3 class="display-5 text-center">Truck Details</h3> 
+<h3 class="display-5 text-center"><i class="fas fa-truck" style="color:#ebbd34"></i> Truck Details</h3> 
 
 <table class="table table-striped mt-5">
     <thead>
@@ -39,7 +39,7 @@
             <td>{{$truck->Package()->count()}}</a></td>
             <td>{{$truck->postman_name}}</td>
             <td>{{$truck->date_of_operation}}</td>
-            <td>{{$truck->status}}</td>
+            <td></td>
             <td class="text-center">
               <a href="{{ route('detail.show',$truck->truck_id)}}" class="btn btn-secondary btn-block" >Item-list</a>
           </td>

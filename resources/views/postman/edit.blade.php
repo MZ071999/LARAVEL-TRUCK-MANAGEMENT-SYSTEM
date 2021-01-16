@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-sm-8 offset-sm-2">
         <br />
-        <h3 class="display-5 text-center">Update Postman Details</h3>
+        <h3 class="display-5 text-center"><i class="fas fa-user" style="color:#ebbd34"></i> Update Postman Details</h3>
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -35,10 +35,6 @@
             <div class="form-group">
                 <label for="postman_name">Postman Name</label>
                 <input type="text" value="{{$postman->postman_name}}" class="form-control" id="postman_name" name="postman_name">
-            </div> 
-            <div class="form-group">
-                <label for="date_of_operation">Operation Date</label>
-                <input type="date" value="{{$postman->date_of_operation}}" class="form-control" id="date_of_operation" name="date_of_operation">
             </div> 
             <div class="text-center">
             <a href="{{ route('postman.index')}}" class="btn btn-primary bg-danger">Return</a>&nbsp;&nbsp;    

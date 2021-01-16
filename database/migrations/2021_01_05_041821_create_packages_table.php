@@ -18,6 +18,7 @@ class CreatePackagesTable extends Migration
             $table->string('truck_number')->nullable(); 
             $table->foreign('truck_number')->references('truck_number')->on('trucks')->onDelete('cascade');
             $table->string('package_number')->unique();
+            $table->string('receiver_name');
             $table->string('destination');
             $table->timestamps();
         });

@@ -29,7 +29,7 @@
 <div class="row justify-content-center mt-4">
 <div class="col-md-8">
 <h1 class="text-center bg-success border mb-3 p-2 font-weight-bold" style="color:#fffcd1"> Choose Which to Track: </h1>
-<div class="jumbotron">
+<div class="jumbotron border">
         <div class="container-fluid mb-3">
             <div class="row">
             <div class="col-sm d-flex">

@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-sm-8 offset-sm-2">
         <br />
-        <h3 class="display-5 text-center">Update Truck Details</h3>
+        <h3 class="display-5 text-center"><i class="fas fa-truck" style="color:#ebbd34"></i> Update Truck Details</h3>
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -36,7 +36,7 @@
             </div>
             <div class="form-group">
                 <label for="status">Status</label>
-                <input type="text" class="form-control" name="status" value="{{ $trucks->status }}">
+                <input type="text" class="form-control" name="status" value="">
             </div>
             <div class="text-center">
             <a href="{{ route('truck.index')}}" class="btn btn-primary bg-danger">Return</a>&nbsp;&nbsp;    

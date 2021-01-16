@@ -7,12 +7,13 @@
     
     <div class="col-sm-12">
     <br />
-    <h3 class="display-5 text-center">Item list of Truck Number {{$trucks->truck_number}}</h3> 
+    <h3 class="display-5 text-center"><i class="fas fa-cube" style="color:#ebbd34"></i> Item list of Truck Number {{$trucks->truck_number}}</h3> 
     
     <table class="table table-striped mt-5">
         <thead>
             <tr>
               <th>Package Number</th>
+              <th>Receiver Name</th>
               <th>Destination</th>
             </tr>
         </thead>
@@ -21,6 +22,7 @@
             <tr>
                
                 <td>{{$package->package_number}}</td>
+                <td>{{$package->receiver_name}}</td>
                 <td>{{$package->destination}}</td>
                 
             </tr>

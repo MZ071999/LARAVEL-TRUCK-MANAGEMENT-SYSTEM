@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-sm-8 offset-sm-2">
         <br />
-        <h3 class="display-5 text-center">Truck Details</h3>
+        <h3 class="display-5 text-center"><i class="fas fa-truck" style="color:#ebbd34"></i> Truck Details</h3>
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -38,7 +38,7 @@
             </div>
             <div class="form-group">
                 <label for="status">Status </label>
-                <input type="text" class="form-control" name="status" value="{{ $trucks->status }}" readonly>
+                <input type="text" class="form-control" name="status" value="" readonly>
             </div>
             </form>
             <div class="text-center">

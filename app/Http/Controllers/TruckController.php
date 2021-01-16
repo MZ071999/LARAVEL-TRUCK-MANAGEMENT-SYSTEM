@@ -45,13 +45,11 @@ class TruckController extends Controller
             'truck_number'=>'required|unique:trucks',
             'postman_name',
             'date_of_operation'=>'required',
-            'status'
         ]);
         $trucks = new Truck([
             'truck_number' => $request->get('truck_number'),
             'postman_name' => $request->get('postman_name'),
-            'date_of_operation' => $request->get('date_of_operation'),
-            'status' => $request->get('status')
+            'date_of_operation' => $request->get('date_of_operation')
         ]);
         $trucks->save();
         return redirect(TRUCK)->with('success', 'Truck Details Saved!');
@@ -95,14 +93,12 @@ class TruckController extends Controller
         $request->validate([
             'truck_number'=>'required|unique:trucks,truck_id',
             'postman_name',
-            'date_of_operation'=>'required',
-            'status'
+            'date_of_operation'=>'required'
         ]);
         $trucks = Truck::find($truck_id);
         $trucks->truck_number =  $request->get('truck_number');
         $trucks->postman_name = $request->get('postman_name');
         $trucks->date_of_operation = $request->get('date_of_operation');
-        $trucks->status = $request->get('status');
         $trucks->save();
         return redirect(TRUCK)->with('success', 'Truck Updated!');
     }

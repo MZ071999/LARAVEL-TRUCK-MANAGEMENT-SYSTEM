@@ -13,7 +13,7 @@
 
 <div class="col-sm-12">
 <br />
-<h3 class="display-5 text-center">Postman Details</h3> 
+<h3 class="display-5 text-center"><i class="fas fa-user" style="color:#ebbd34"></i> Postman Details</h3> 
 
     <table class="table table-striped mt-5">
         <thead>

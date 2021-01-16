@@ -3,7 +3,7 @@
 <div class="row">
  <div class="col-sm-8 offset-sm-2">
   <br />
-    <h3 class="display-5 text-center">Add New Package Details</h3>
+    <h3 class="display-5 text-center"> <i class="fas fa-cube" style="color:#ebbd34"></i> Add New Package Details</h3>
   <div>
     @if ($errors->any())
       <div class="alert alert-danger">
@@ -33,10 +33,13 @@
               <input type="text" class="form-control" name="package_number"/>
           </div>
           <div class="form-group">
+              <label for="receiver_name">Receiver</label>
+              <input type="text" class="form-control" name="receiver_name"/>
+          </div>
+          <div class="form-group">
               <label for="destination">Destination</label>
               <input type="text" class="form-control" name="destination"/>
           </div>
-          
           <div class="row justify-content-center">
           <a href="{{ route('package.index')}}" class="btn btn-primary bg-danger">Return</a>&nbsp;&nbsp;                        
           <button type="submit" class="btn btn-primary text-center bg-success">Save Details</button>

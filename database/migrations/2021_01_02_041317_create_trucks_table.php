@@ -18,7 +18,6 @@ class CreateTrucksTable extends Migration
             $table->string('truck_number')->unique();
             $table->string('postman_name')->nullable();
             $table->date('date_of_operation');
-            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

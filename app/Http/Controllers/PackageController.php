@@ -44,11 +44,13 @@ class PackageController extends Controller
         $request->validate([
             'truck_number',
             'package_number' => 'required|unique:packages',
+            'receiver_name' => 'required',
             'destination' => 'required'
         ]);
         $packages = new Package([
             'truck_number' => $request->truck_number,
             'package_number' => $request->package_number,
+            'receiver_name' => $request->receiver_name,
             'destination' => $request->destination
         ]);
         $packages->save();
@@ -94,11 +96,13 @@ class PackageController extends Controller
         $request->validate([
             'truck_number',
             'package_number' => 'required|unique:packages,package_id',
+            'receiver_name' => 'required',
             'destination' => 'required'
         ]);
         $packages = Package::find($package_id);
         $packages->truck_number = $request->get('truck_number');
         $packages->package_number = $request->get('package_number');
+        $packages->receiver_name = $request->get('receiver_name');
         $packages->destination = $request->get('destination');
         $packages->save();
         return redirect(PACKAGE)->with('success', 'Package Updated!');

@@ -3,7 +3,7 @@
 <div class="row">
  <div class="col-sm-8 offset-sm-2">
   <br />
-    <h3 class="display-5 text-center">Add New Truck Details</h3>
+    <h3 class="display-5 text-center"><i class="fas fa-truck" style="color:#ebbd34"></i> Add New Truck Details</h3>
   <div>
     @if ($errors->any())
       <div class="alert alert-danger">

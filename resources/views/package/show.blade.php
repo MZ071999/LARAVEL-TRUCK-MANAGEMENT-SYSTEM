@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-sm-8 offset-sm-2">
         <br />
-        <h3 class="display-5 text-center">Package Details</h3>
+        <h3 class="display-5 text-center"> <i class="fas fa-cube" style="color:#ebbd34"></i> Package Details</h3>
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -17,11 +17,19 @@
         @endif
             <div class="form-group">
                 <label for="truck_number">Truck Number</label>
+                @if($packages->truck_number != null)
                 <input type="text" class="form-control" name="truck_number" value="{{ $packages->truck_number }}" readonly>
-            </div>
+                @else
+                <input type="text" class="form-control" name="truck_number" value="no trucks assigned" readonly>
+                @endif
+          </div>
             <div class="form-group">
                 <label for="package_number">Package Number</label>
                 <input type="text" class="form-control" name="package_number" value="{{ $packages->package_number }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="receiver_name">Receiver Name</label>
+                <input type="text" class="form-control" name="package_number" value="{{ $packages->receiver_name }}" readonly>
             </div>
             <div class="form-group">
                 <label for="destination">Destination</label>
