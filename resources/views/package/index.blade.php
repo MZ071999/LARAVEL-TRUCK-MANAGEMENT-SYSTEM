@@ -33,8 +33,8 @@
     @foreach($packages as $count => $package)
         <tr>
             <td>{{$packages->firstItem()+ $count}}</td>
-            <td><a href="{{ route('package.show',$package->package_id)}}">{{$package->truck_number}}</a></td>
-            <td>{{$package->package_number}}</td>
+            <td>{{$package->truck_number}}</td>
+            <td><a href="{{ route('package.show',$package->package_id)}}">{{$package->package_number}}</a></td>
             <td>{{$package->destination}}</td>
             <td class="text-center">
                 <a href="{{ route('package.edit',$package->package_id)}}" class="btn btn-primary btn-block">Edit</a>

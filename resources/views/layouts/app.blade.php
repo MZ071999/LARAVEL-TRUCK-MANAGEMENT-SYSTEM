@@ -31,8 +31,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex" href="{{ url('home') }}">
-                    <div class="pr-3" style="border-right: 1px solid #333;"><i class="fas fa-shipping-fast"></i> </div>
-                    <div class="pl-3">Parcel Management System</div>
+                    <div class="pr-3" style="border-right: 1px solid #333;"><i class="fas fa-shipping-fast" style="color:#5cb85c"></i> </div>
+                    <div class="pl-3 font-weight-bold" style="color:#ab7500">Parcel Management System</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -61,16 +61,16 @@
                             @endif
                         @else
                             <li class="nav-item font-weight-bold pl-3">
-                                    <a class="nav-link" href="{{ route('truck.index') }}"> Truck </a>
+                                    <a class="nav-link" href="{{ route('truck.index') }}" style="color:#ab7500"> Truck </a>
                             </li>
                             <li class="nav-item font-weight-bold pl-3">
-                                    <a class="nav-link" href="{{ route('postman.index') }}"> Postman </a>
+                                    <a class="nav-link" href="{{ route('postman.index') }}" style="color:#ab7500"> Postman </a>
                             </li>
                             <li class="nav-item font-weight-bold pl-3">
-                                    <a class="nav-link" href="{{ route('package.index') }}"> Package </a>
+                                    <a class="nav-link" href="{{ route('package.index') }}" style="color:#ab7500"> Package </a>
                             </li>
                             <li class="nav-item dropdown font-weight-bold pl-3">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color:#ab7500" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 

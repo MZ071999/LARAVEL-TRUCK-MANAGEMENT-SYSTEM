@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Truck;
+use App\Models\Package;
+use App\Models\postman;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $trucks = Truck::all();
+        $packages = Package::all();
+        $postmen = postman::all();
+        return view('home')->with(compact('trucks'))->with(compact('packages'))->with(compact('postmen'));
     }
 }
