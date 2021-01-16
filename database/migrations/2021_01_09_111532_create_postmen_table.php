@@ -16,7 +16,7 @@ class CreatePostmenTable extends Migration
         Schema::create('postmen', function (Blueprint $table) {
             $table->increments('postman_id');
             $table->string('truck_number')->nullable();
-            $table->foreign('truck_number')->references('truck_number')->on('trucks');
+            $table->foreign('truck_number')->references('truck_number')->on('trucks')->onDelete('cascade')->onUpdate('cascade');
             $table->string('postman_number')->unique();
             $table->string('postman_name');
             $table->timestamps();

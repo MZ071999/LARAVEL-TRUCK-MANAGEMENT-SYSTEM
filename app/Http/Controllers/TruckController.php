@@ -30,7 +30,8 @@ class TruckController extends Controller
      */
     public function create()
     {
-        return view('truck.create');
+        $postmen = postman::all();
+        return view('truck.create')->with(compact('postmen'));
     }
 
     /**
