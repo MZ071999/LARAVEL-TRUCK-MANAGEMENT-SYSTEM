@@ -14,6 +14,6 @@ class postman extends Model
     protected $fillable = ['truck_number','postman_number','postman_name'];
 
     public function Truck(){
-        return $this->belongsTo(Truck::class);
+        return $this->belongsTo(Truck::class, 'postman_name', 'postman_name');
     }
 }
