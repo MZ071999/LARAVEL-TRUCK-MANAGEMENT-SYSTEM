@@ -214,7 +214,7 @@ Truck Page contains details about the truck data and is the main page of this sy
 ---
 ## ERD
 
-![alt text](https://github.com/[MZ071999]/[WEBDEV_PROJECT]/blob/[master]/erd.jpg?raw=true)
+![ERD](https://github.com/MZ071999/WEBDEV_PROJECT/blob/master/erd.jpg?raw=true)
 
 ---
 
