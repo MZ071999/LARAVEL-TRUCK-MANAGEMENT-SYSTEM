@@ -20,6 +20,7 @@
           <div class="form-group">    
               <label for="truck_number">Truck Number</label>
               <select name="truck_number" class="form-control">
+              <option selected disabled>-</option>
               @foreach ($trucks as $count => $truck)
                 @if(($truck->Package()->count()) < 50)
                   <option value="{{$truck['truck_number']}}">{{$truck['truck_number']}}</option>

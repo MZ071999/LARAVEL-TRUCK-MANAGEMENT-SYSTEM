@@ -42,7 +42,7 @@ class PackageController extends Controller
     {
         //Validate
         $request->validate([
-            'truck_number' => 'required',
+            'truck_number',
             'package_number' => 'required|unique:packages',
             'destination' => 'required'
         ]);
@@ -92,7 +92,7 @@ class PackageController extends Controller
     {
         //validate
         $request->validate([
-            'truck_number' => 'required',
+            'truck_number',
             'package_number' => 'required|unique:packages,package_id',
             'destination' => 'required'
         ]);
