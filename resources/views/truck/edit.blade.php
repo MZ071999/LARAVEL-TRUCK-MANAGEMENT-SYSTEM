@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label for="date_of_operation">Date of Operation</label>
-                <input type="text" class="form-control" name="date_of_operation" value="{{ $trucks->date_of_operation }}">
+                <input type="date" class="form-control" name="date_of_operation" value="{{ $trucks->date_of_operation }}">
             </div>
             <div class="form-group">
                 <label for="status">Status</label>

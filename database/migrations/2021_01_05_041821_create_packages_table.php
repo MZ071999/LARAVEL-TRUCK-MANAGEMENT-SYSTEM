@@ -32,6 +32,13 @@ class CreatePackagesTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstaints();
+        Schema::table('packages', function(Blueprint $table){
+            $table->dropForeign(['truck_number']);
+        });
+
         Schema::dropIfExists('packages');
+        Schema::enableForeignKeyConstraints();
+    
     }
 }
