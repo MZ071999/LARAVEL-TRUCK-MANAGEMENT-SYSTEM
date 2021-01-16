@@ -28,12 +28,9 @@
             </div>
             <div class="form-group">
                 <label for="postman_name">Postman in Charge</label>
-                <select name="postman_name" class="form-control">
-              <option selected disabled>-</option>
               @foreach ($postmen as $count => $postman)
-                  <option value="{{$postman['postman_name']}}">{{$postman['postman_name']}}</option>
+              <input type="text" class="form-control" value="{{$postman->postman_name}}" readonly>
               @endforeach
-              </select>
             </div>
             <div class="form-group">
                 <label for="date_of_operation">Date of Operation</label>

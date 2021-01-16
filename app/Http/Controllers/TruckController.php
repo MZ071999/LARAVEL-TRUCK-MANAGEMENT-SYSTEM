@@ -20,7 +20,8 @@ class TruckController extends Controller
     {
         $trucks = Truck::paginate(5);
         $packages = Package::all('package_number');
-        return view('truck.index', compact('trucks'))->with('package_number', $packages);
+        $postmen = postman::all();
+        return view('truck.index', compact('trucks'))->with('package_number', $packages)->with(compact('postmen'));
     }
 
     /**
@@ -66,7 +67,8 @@ class TruckController extends Controller
     {
         $trucks = Truck::find($truck_id);
         $packages = Package::all('package_number');
-        return view('truck.show', compact('trucks'))->with('package_number', $packages);
+        $postmen = postman::where('truck_number', $trucks->truck_number)->get();
+        return view('truck.show', compact('trucks'))->with('package_number', $packages)->with(compact('postmen'));  
     }
 
     /**
@@ -78,7 +80,7 @@ class TruckController extends Controller
     public function edit($truck_id)
     {
         $trucks = Truck::find($truck_id);
-        $postmen = postman::all();
+        $postmen = postman::where('truck_number', $trucks->truck_number)->get();
         return view('truck.edit', compact('trucks'))->with(compact('postmen'));  
     }
 
