@@ -153,8 +153,13 @@ Truck Page contains details about the truck data and is the main page of this sy
 
 #### :mailbox_closed: Routes
 
-- Main Routes
-- Resources Routes
+- '/' Routes
+- '/home' Routes
+- Resources Routes:
+  * '/truck'
+  * '/package'
+  * '/postman'
+  * '/detail' Routes
 
 #### :books: Models
 - User
@@ -171,10 +176,12 @@ Truck Page contains details about the truck data and is the main page of this sy
   * Pagination
   * User Authentication and registration
   * CRUD operation on Truck table
+  * `home.blade.php` page
   * Automatically update truck number on `package/create.blade.php`'s dropdown list
   * Automatically update truck number on `postman/create.blade.php`'s dropdown list
+  * if else checks to display 'ASSIGNED' / 'NOT ASSIGNED' message on `postman/index.blade.php` and `postman/show.blade.php`
   * Function inside `package/create.blade.php` file to show truck_number which quantity is less than 50 and not showing truck_number which quantity is already 50.
-  * Update total Quantity on Truck/index.blade.php everytime a new package is assigned to a specific truck.
+  * Update total Quantity on `Truck/index.blade.php` everytime a new package is assigned to a specific truck.
   * Truck Controller, Views, Routes, Model, Migration
   * 404 Error page
 - Hafiz:
@@ -197,6 +204,7 @@ Truck Page contains details about the truck data and is the main page of this sy
   * Display FULL when truck quantity is 50. 
   * Display AVAILABLE when truck quantity is less than 50
   * CRUD operation on Postman table
+  * Define relationships and foreign key constraints on Postman migration and model
   * Postman Controller
   * Postman views
   * Postman Routes
