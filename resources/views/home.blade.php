@@ -28,7 +28,7 @@
 <div class="container">
 <div class="row justify-content-center mt-4">
 <div class="col-md-8">
-<h1 class="text-center bg-success border mb-3 p-2 font-weight-bold" style="color:#e3e3e3"> Choose Which to Track: </h1>
+<h1 class="text-center bg-success border mb-3 p-2 font-weight-bold" style="color:#fffcd1"> Choose Which to Track: </h1>
 <div class="jumbotron">
         <div class="container-fluid mb-3">
             <div class="row">
@@ -37,7 +37,11 @@
                     <span class="font-weight-bold text-large" style="color:#eb4034"> {{count($trucks)}} </span>
                     <br/>
                     <i class="fas fa-truck" style="color:#ebbd34"></i>
+                    @if((count($trucks)) <= 1)
+                    <a href="{{ route('truck.index')}}">Truck</a>
+                    @elseif ((count($trucks)) > 1)
                     <a href="{{ route('truck.index')}}">Trucks</a>
+                    @endif
                 </div>
             </div>
             <div class="col-sm d-flex">
@@ -45,7 +49,11 @@
                     <span class="font-weight-bold text-large text-center" style="color:#eb4034"> {{count($packages)}} </span>
                     <br/>
                     <i class="fas fa-cube" style="color:#ebbd34"></i>
+                    @if((count($packages)) <= 1)
+                    <a href="{{ route('package.index')}}"> Package </a>
+                    @elseif((count($packages)) > 1)
                     <a href="{{ route('package.index')}}"> Packages </a>
+                    @endif
                 </div>
             </div>
             <div class="col-sm d-flex">
@@ -53,7 +61,11 @@
                     <span class="font-weight-bold text-large text-center" style="color:#eb4034"> {{count($postmen)}} </span>
                     <br/>
                     <i class="fas fa-user" style="color:#ebbd34"></i>
+                    @if((count($postmen)) <= 1)
+                    <a href="{{ route('postman.index')}}"> Postman </a>
+                    @elseif((count($postmen)) > 1)
                     <a href="{{ route('postman.index')}}"> Postmen </a>
+                    @endif
                 </div>
             </div>
             </div>

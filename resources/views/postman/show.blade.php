@@ -29,7 +29,7 @@
             </div>
             <div class="form-group">
                 <label for="date_of_operation">Status</label>
-                @if($postman->truck_number != '-')
+                @if($postman->truck_number != null)
                 <input type="text" class="form-control" name="date_of_operation" value="ASSIGNED" readonly>
                     @else
                 
