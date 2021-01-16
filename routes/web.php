@@ -26,7 +26,7 @@ Route::resource('truck', 'App\Http\Controllers\TruckController');
 Route::resource('package', 'App\Http\Controllers\PackageController');
 Route::resource('postman','App\Http\Controllers\postmanController');
 Route::resource('detail', 'App\Http\Controllers\DetailController');
-Route::get('/logout', 'App\Http\Controllers\LoginController@logout');
+Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/welcome', function() {
     return view('index');
