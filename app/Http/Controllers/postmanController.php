@@ -18,7 +18,6 @@ class postmanController extends Controller
         $postman = postman::all();
         return view('postman.index', compact('postman', $postman));
     }
-
     /**
      * Show the form for creating a new resource.
      *
