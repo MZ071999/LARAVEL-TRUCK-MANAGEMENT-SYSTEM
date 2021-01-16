@@ -36,7 +36,7 @@
             </div>
             <div class="form-group">
                 <label for="status">Status</label>
-                <input type="text" class="form-control" name="status" value="">
+                <input type="text" class="form-control" name="status" value="" readonly>
             </div>
             <div class="text-center">
             <a href="{{ route('truck.index')}}" class="btn btn-primary bg-danger">Return</a>&nbsp;&nbsp;    
