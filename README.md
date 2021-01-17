@@ -214,12 +214,13 @@ Truck Page contains details about the truck data and is the main page of this sy
 ---
 ## ERD
 
-![ERD](https://github.com/MZ071999/WEBDEV_PROJECT/master/imgs/erd.jpg?raw=true)
+![ERD](https://github.com/MZ071999/WEBDEV_PROJECT/blob/master/imgs/erd.jpeg)
 
 ---
 
 ## Sequence Diagram
 
+![Sequence Diagram](https://github.com/MZ071999/WEBDEV_PROJECT/blob/master/imgs/sequence.png)
 ---
 
 ## References
