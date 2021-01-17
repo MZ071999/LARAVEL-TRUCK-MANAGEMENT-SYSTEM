@@ -212,8 +212,10 @@ Truck Page contains details about the truck data and is the main page of this sy
   * User Authentication and registration
   * CRUD operation on Truck table & error handling inside each files
   * `home.blade.php` page
+  * Define relationship and constraints between Truck and Postman
+  * Automatically update postman name on `truck/create.blade.php`'s dropdown list
   * Automatically update truck number on `package/create.blade.php`'s dropdown list everytime a new truck data is created
-  * if else checks to display 'ASSIGNED' / 'NOT ASSIGNED' message on `postman/index.blade.php` and `postman/show.blade.php`
+  * Display 'ASSIGNED' / 'NOT ASSIGNED' message on `postman/index.blade.php` and `postman/show.blade.php`
   * Function inside `package/create.blade.php` file to show truck_number which quantity is less than 50 and not showing truck_number which quantity is already 50.
   * Update total Quantity on `Truck/index.blade.php` everytime a new package is assigned to a specific truck.
   * Truck Controller, Views, Routes, Model, Migration
@@ -223,10 +225,11 @@ Truck Page contains details about the truck data and is the main page of this sy
   * Display item details on truck table when admin click on 'item-list' option (item details contain all package data that are associated with that specific truck. Data includes package number and package's destination/address). To fulfill this, two extra files were created:
     - Detailcontroller.php
     - truck/detail.blade.php
-  * Automatically update postman name on `truck/create.blade.php`'s dropdown list
   * CRUD operation on Package table & error handling inside each files
   * `Welcome.blade.php` page
   * Define relationship between truck table and package table
+    - Define constraints on migration and models of Truck and Package
+    - Define one to many relationship between Truck and Package
   * Package Controller
   * Package views
   * Package Routes
