@@ -19,12 +19,7 @@
           @csrf
         <div class="form-group">   
             <label for="title">Truck Number</label>
-            <select name="truck_number" class="form-control">
-            <option selected disabled>-</option>
-              @foreach ($trucks as $count => $truck)
-                  <option value="{{$truck['truck_number']}}">{{$truck['truck_number']}}</option>
-              @endforeach
-              </select>
+            <input type="text" class="form-control" id="truck_number" name="truck_number" placeholder="no truck is assigned yet" readonly>
         </div>
         <div class="form-group">
             <label for="title">Postman Number</label>

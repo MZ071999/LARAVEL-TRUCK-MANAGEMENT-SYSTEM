@@ -36,8 +36,12 @@
         <tr>
             <td>{{$trucks->firstItem()+ $count}}</td>
             <td><a href="{{ route('truck.show',$truck->truck_id)}}">{{$truck->truck_number}}</a></td>
-            <td>{{$truck->Package()->count()}}</td>           
+            <td>{{$truck->Package()->count()}}</td>
+            @if($truck->postman_name != null)           
             <td>{{$truck->postman_name}}</td>
+            @else
+            <td> - </td>
+            @endif
             <td>{{$truck->date_of_operation}}</td>
             <td></td>
             <td class="text-center">
