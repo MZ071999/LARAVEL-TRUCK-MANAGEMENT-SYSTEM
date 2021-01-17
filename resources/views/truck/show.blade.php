@@ -38,7 +38,11 @@
             </div>
             <div class="form-group">
                 <label for="status">Status </label>
-                <input type="text" class="form-control" name="status" value="" readonly>
+                @if(($trucks->Package()->count()) < 50)
+                <input type="text" class="form-control" name="status" value="AVAILABLE" readonly>
+                @else
+                <input type="text" class="form-control" name="status" value="FULL" readonly>
+                @endif
             </div>
             </form>
             <div class="text-center">
