@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>409 Page not found</title>
+    <title>419 Page expired</title>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -18,7 +18,7 @@
 <body>
     <div class="container mt-5 pt-5">
         <div class="aler alert-danger text-center">
-        <h1 class="display-3"> 409 Page not Found </h1>
+        <h1 class="display-3">Value already taken!</h1>
         </div>
         <p class="display-5 mt-5 text-center"><a class="btn btn-primary bg-success" href="{{url('home')}}">  Back to Home Page </a></p>
     </div>

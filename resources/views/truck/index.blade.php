@@ -36,9 +36,18 @@
         <tr>
             <td>{{$trucks->firstItem()+ $count}}</td>
             <td><a href="{{ route('truck.show',$truck->truck_id)}}">{{$truck->truck_number}}</a></td>
-            <td>{{$truck->Package()->count()}}</a></td>
+            <td>{{$truck->Package()->count()}}</td>
+            @if($truck->postman_name != null)           
             <td>{{$truck->postman_name}}</td>
+            @else
+            <td> - </td>
+            @endif
             <td>{{$truck->date_of_operation}}</td>
+     @if(($truck->Package()->count()) < 50)
+         <td class="table-success"> AVAILABLE </td>
+          @else
+             <td class="table-danger"> FULL </td>
+          @endif
             <td></td>
             <td class="text-center">
               <a href="{{ route('detail.show',$truck->truck_id)}}" class="btn btn-secondary btn-block" >Item-list</a>

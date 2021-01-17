@@ -30,10 +30,10 @@
             @foreach($postman as $count => $postman)
             <tr>
                     <td>{{++$count}}</td>
-                    <td>{{$postman->truck_number}}</td>
+                    <td>{{$postman->truck['truck_number']}}</td>
                     <td><a href="{{ route('postman.show',$postman->postman_id)}}">{{$postman->postman_number}}</a></td>
                     <td>{{$postman->postman_name}}</td>
-                    @if($postman->truck_number != null)
+                    @if($postman->truck['truck_number'] != null)
                       <td class="table-success"> ASSIGNED </td>
                     @else
                       <td class="table-danger"> NOT ASSIGNED </td>

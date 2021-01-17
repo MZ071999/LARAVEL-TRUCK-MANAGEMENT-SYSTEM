@@ -15,10 +15,9 @@ class postmanController extends Controller
      */
     public function index()
     {
-        $postman = postman::all();
+        $postman = postman::with('truck')->get();
         return view('postman.index', compact('postman', $postman));
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -26,8 +25,8 @@ class postmanController extends Controller
      */
     public function create()
     {
-        $trucks = Truck::all('truck_number');
-        return view('postman.create')->with('truck_number', $trucks);
+        $trucks = Truck::all();
+        return view('postman.create')->with(compact('trucks'));
     }
 
     /**

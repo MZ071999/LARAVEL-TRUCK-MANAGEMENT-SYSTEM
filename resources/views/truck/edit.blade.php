@@ -28,12 +28,12 @@
             </div>
             <div class="form-group">
                 <label for="postman_name">Postman in Charge</label>
-                <select name="truck_number" class="form-control">
-                <option selected disabled>-</option>
-                @foreach ($postmen as $count => $postman)
+                <select name="postman_name" class="form-control">
+              <option selected disabled>-</option>
+              @foreach ($postmen as $count => $postman)
                   <option value="{{$postman['postman_name']}}">{{$postman['postman_name']}}</option>
-                @endforeach
-                </select>
+              @endforeach
+              </select>
             </div>
             <div class="form-group">
                 <label for="date_of_operation">Date of Operation</label>
