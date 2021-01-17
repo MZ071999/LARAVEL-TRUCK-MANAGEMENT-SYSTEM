@@ -121,6 +121,7 @@ Truck Page contains details about the truck data and is the main page of this sy
   * edit.blade.php
   * index.blade.php
   * show.blade.php
+  * details.blade.php -> Hafiz
 - :file_folder: package -> Hafiz
   * create.blade.php
   * edit.blade.php
@@ -132,16 +133,16 @@ Truck Page contains details about the truck data and is the main page of this sy
   * index.blade.php
   * show.blade.php
 - :file_folder: errors
-  * 404.blade.php
-  * 401.blade.php
-  * 419.blade.php
-- home.blade.php
-- index.blade.php
+  * 404.blade.php -> Mufida
+  * 401.blade.php -> Hafiz
+  * 419.blade.php -> Nada
+- home.blade.php -> Mufida
+- index.blade.php -> Hafiz
 
 #### :hammer: Controllers
 - :file_folder: Auth
 - HomeController
-- Detailcontroller
+- Detailcontroller -> Hafiz
 - TruckController -> Mufida
   * index()
   * store ()
@@ -163,14 +164,36 @@ Truck Page contains details about the truck data and is the main page of this sy
 
 #### :mailbox_closed: Routes
 
-- '/welcome' Routes
-- '/logout'
-- '/home' Routes
-- Resources Routes:
-  * '/truck'
-  * '/package'
-  * '/postman'
-  * '/detail'
+- Auth::routes()
+- '/welcome' (Verb: get)
+- '/logout' (Verb: get)
+- '/home' (Verb: get)
+- Route names by Resource Controller:
+  * Route::resource('truck', 'App\Http\Controllers\TruckController');
+    - 'truck.index' 
+    - 'truck.create'
+    - 'truck.store'
+    - 'truck.show'
+    - 'truck.edit'
+    - 'truck.update'
+    - 'truck.destroy'
+  * Route::resource('package', 'App\Http\Controllers\PackageController');
+    - 'package.index' 
+    - 'package.create'
+    - 'package.store'
+    - 'package.show'
+    - 'package.edit'
+    - 'package.update'
+    - 'package.destroy'
+  * Route::resource('postman','App\Http\Controllers\postmanController');
+    - 'postman.index' 
+    - 'postman.create'
+    - 'postman.store'
+    - 'postman.show'
+    - 'postman.edit'
+    - 'postman.update'
+    - 'postman.destroy'
+  * 'detail'
 
 #### :books: Models
 - User
@@ -186,7 +209,7 @@ Truck Page contains details about the truck data and is the main page of this sy
   * Unique value Validation
   * Pagination
   * User Authentication and registration
-  * CRUD operation on Truck table
+  * CRUD operation on Truck table & error handling inside each files
   * `home.blade.php` page
   * Automatically update truck number on `package/create.blade.php`'s dropdown list everytime a new truck data is created
   * if else checks to display 'ASSIGNED' / 'NOT ASSIGNED' message on `postman/index.blade.php` and `postman/show.blade.php`
@@ -200,7 +223,7 @@ Truck Page contains details about the truck data and is the main page of this sy
     - Detailcontroller.php
     - truck/detail.blade.php
   * Automatically update postman name on `truck/create.blade.php`'s dropdown list
-  * CRUD operation on Package table
+  * CRUD operation on Package table & error handling inside each files
   * `Welcome.blade.php` page
   * Define relationship between truck table and package table
   * Package Controller
@@ -213,7 +236,7 @@ Truck Page contains details about the truck data and is the main page of this sy
   * ERD Diagram
   * Display FULL when truck quantity is 50. 
   * Display AVAILABLE when truck quantity is less than 50
-  * CRUD operation on Postman table
+  * CRUD operation on Postman table  & error handling inside each files
   * Define relationships and foreign key constraints on Postman migration and model
   * Postman Controller
   * Postman views
@@ -236,3 +259,4 @@ Truck Page contains details about the truck data and is the main page of this sy
 ## References
 
 - https://stackoverflow.com/
+- https://laravel.com/docs/8.x
