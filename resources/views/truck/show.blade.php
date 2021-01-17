@@ -30,9 +30,7 @@
             </div>
             <div class="form-group">
                 <label for="postman_name">Postman in Charge</label>
-                @foreach ($postmen as $count => $postman)
-                <input type="text" class="form-control" value="{{$postman->postman_name}}" readonly>
-                @endforeach
+                <input type="text" class="form-control" name="no_of_items" value="{{$trucks->postman_name}}" readonly>
             </div>
             <div class="form-group">
                 <label for="date_of_operation">Date of Operation</label>
