@@ -17,15 +17,15 @@ This web application is built to track shipped packages and shipping trucks in a
 
 ## Objectives
 
-With simple and easy to understand UI, Parcel Management System will help system admin to do CRUD operation (Create, Read, Update, Delete) on every main element of the system which are Trucks data, Packages data and Postmen Data.
+With simple and easy to understand UI, Parcel Management System will help system admin to do CRUD operation (Create, Read, Update, Delete) on every element inside the system which are Trucks data, Packages data and Postmen Data.
 
 ---
 
 ## Features and Functionalities
 
-:pushpin: Admin first logged into the system. There will be authentication involved. If Admin has not register yet, Admin can click on the 'register' button to register first. <br />
+:pushpin: Admin first logged into the system. There will be authentication involved. If Admin is not registered yet, Admin can click on the 'register' button to register first, and then proceed to log in. <br />
 
-:pushpin: Once logged in, Admin is greeted by the home page where there are three options to choose: Truck, Package, Postman. Admin can click on one of the option to see further details about each category <br />
+:pushpin: Once logged in, Admin is greeted by the home page where there are three options to choose: Truck, Package, Postman. All are displayed along with their total quantities. If there are 4 data inside truck table, then 4 trucks will be displayed on the home page, same thing applies for packages and postmen. Admin then can click on one of the option (truck/package/postman) to see further details about each category <br />
 
 :pushpin: Truck Page :truck: <br />
 Truck Page contains details about the truck data and is the main page of this system.
@@ -33,8 +33,10 @@ Truck Page contains details about the truck data and is the main page of this sy
 - :man: Admin CAN: <br/>
   * Perform CRUD operation on truck table
   * Add new Truck/ Edit the truck/ Update it/ Delete data from the truck table
+  * Assign new postman into a truck by selecting postman_name from a drop down list.
 
 - Features:
+  * Pagination feature on truck index page, displaying 5 data per page.
   * Truck index page will display the following columns: 
     - truck number 
     - Quantity (how many items are loaded into the truck) 
@@ -42,25 +44,26 @@ Truck Page contains details about the truck data and is the main page of this sy
     - Date of operation
     - Status (whether the space inside the truck is still available or not).   
     - Action:
-      * Item-list (once clicked, this will display a page containing package details)
+      * Item-list (once clicked, this will display a page containing detail list of packages that are assigned to a specific truck_number)
       * Edit
       * Delete
   * Also from the truck index page, Admin can click on desired truck number to view a readonly details of the truck which will display the folliwng information:
     - Truck number
     - Quantity 
     - Available for: (this will show how many more packages can be load into the truck)
-    - Postman in Charge:
+    - Postman in Charge
     - Date of Operation
     - Status
-  * Also from the truck index page, under `Action` section, Admin can click on a button called `Item-list` to view a readonly list of every packages that are assigned to that specific truck. The page will display the following detals:
+  * Also from the truck index page, under `Action` section, Admin can click on a button called `Item-list` to view a readonly list of every packages that are assigned to that specific truck. Once this button is clicked, admin will be directed to `detail.blade.php` file and the page will display the following details:
     - Package number 
+    - Receiver name
     - Destination address.
 
 - Functionalities:
-  * One truck can load a maximum of 50 items in a day.
-  * A message prompt "FULL" will be displayed if a truck has reached maximum limit (when truck's quantity had reached 50 items).
-  * A message prompt "AVAILABLE" will be displayed if a truck can load more items (when truck's quantity is less than 50 items).
-  * In the edit page, on the 'quantity' label, there will be a message displayed indicating how many more packages can be load into the truck. if the truck currently have 25 packages, the message will be "25 more items can be loaded".
+  * One truck can load a maximum of 50 items.
+  * Under status, A message prompting "FULL" will be displayed when a truck has reached maximum limit (when truck's quantity had reached 50 items).
+  * Under status, A message prompting "AVAILABLE" will be displayed when a truck can load more items (when truck's quantity is less than 50 items).
+  * In the show page, on the 'quantity' label, there will be a message displayed indicating how many more packages can be load into the truck. if the truck currently have 25 packages, the message will be "25 more items can be loaded".
   
 - :man: Admin CAN'T: <br/>
   * Assign new package into the truck. Assigning new package into a truck can only happen from the Package page. 
@@ -75,8 +78,10 @@ Truck Page contains details about the truck data and is the main page of this sy
   * Assign new package into a specific truck_number
   
 - Features and Functionalities:
-  * When a package is assigned into a specific truck_number, it will be updated automatically on the truck table as well
-  * truck_number with total quantity equal to 50 won't be displayed on the dropdown list for admin to choose
+  * Pagination feature, displaying 5 data per page.
+  * When a new package is added and is assigned to a specific truck, `Quantity` data and `Item-List` data inside the truck page associated with its respective truck_number will get automatically updated as well
+  * truck_number with total quantity equal to 50 won't be displayed on the dropdown list for admin to assign package to, because that truck is now full.
+  * package number is a unique value.
   
 <br />
   
@@ -87,8 +92,13 @@ Truck Page contains details about the truck data and is the main page of this sy
   * Add new Postman/ Edit some item on the Postman/ Update it/ Delete item from the Postman table
   
 - Features and Functionalities;
-  * When a new postman is added and is assigned to a specific truck, `Quantity` data and `Item-List` data inside the truck page will be automatically updated as well
-  * A function is implemented inside `postman/create.blade.php` file to only display list of truck_number which quantity is less than 50. If a truck_number currently have more than 50 items, the truck_number won't be displayed on the dropdown list. This is to prevent admin to assign packages into a full truck.
+  * truck_number inside postman page will get automatically updated when a postman_name is assigned to a truck_number from the truck page
+  * Status 'ASSIGNED' will be automatically displayed under 'status' when a postman_name is assigned to a truck_number from the truck page
+  * Status 'NOT ASSIGNED' will be automatically displayed under 'status' when a postman_name is not assigned to any truck_number yet
+  * postman number is a unique value
+  
+- Admin CAN'T:
+  * Assign new truck_number into postman. Assigning postman to a specific truck_number can only happen from truck page. Admin however, can view which truck_number is assigned to that specific postman_name after adding it from the truck table.
 
 ---
 
@@ -126,7 +136,7 @@ Truck Page contains details about the truck data and is the main page of this sy
   * 401.blade.php
   * 419.blade.php
 - home.blade.php
-- welcome.blade.php
+- index.blade.php
 
 #### :hammer: Controllers
 - :file_folder: Auth
@@ -153,13 +163,14 @@ Truck Page contains details about the truck data and is the main page of this sy
 
 #### :mailbox_closed: Routes
 
-- '/' Routes
+- '/welcome' Routes
+- '/logout'
 - '/home' Routes
 - Resources Routes:
   * '/truck'
   * '/package'
   * '/postman'
-  * '/detail' Routes
+  * '/detail'
 
 #### :books: Models
 - User
@@ -172,13 +183,12 @@ Truck Page contains details about the truck data and is the main page of this sy
 
 - Mufida:
   * github readme.md
-  * Unique value Validation on all tables
+  * Unique value Validation
   * Pagination
   * User Authentication and registration
   * CRUD operation on Truck table
   * `home.blade.php` page
-  * Automatically update truck number on `package/create.blade.php`'s dropdown list
-  * Automatically update truck number on `postman/create.blade.php`'s dropdown list
+  * Automatically update truck number on `package/create.blade.php`'s dropdown list everytime a new truck data is created
   * if else checks to display 'ASSIGNED' / 'NOT ASSIGNED' message on `postman/index.blade.php` and `postman/show.blade.php`
   * Function inside `package/create.blade.php` file to show truck_number which quantity is less than 50 and not showing truck_number which quantity is already 50.
   * Update total Quantity on `Truck/index.blade.php` everytime a new package is assigned to a specific truck.
