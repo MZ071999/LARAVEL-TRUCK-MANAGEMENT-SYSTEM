@@ -15,7 +15,7 @@ class postmanController extends Controller
      */
     public function index()
     {
-        $postman = postman::all();
+        $postman = postman::with('truck')->get();
         return view('postman.index', compact('postman', $postman));
     }
     /**
