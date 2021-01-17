@@ -220,6 +220,7 @@ Truck Page contains details about the truck data and is the main page of this sy
 
 ## Sequence Diagram
 
+![Sequence Diagram](https://github.com/MZ071999/WEBDEV_PROJECT/blob/master/imgs/sequence.png)
 ---
 
 ## References
