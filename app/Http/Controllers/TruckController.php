@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
 use App\Models\Truck;
 use App\Models\Package;
 use App\Models\postman;
@@ -94,7 +95,7 @@ class TruckController extends Controller
     public function update(Request $request, $truck_id)
     {
         $request->validate([
-            'truck_number'=>'required|unique:trucks,truck_id',
+            'truck_number'=>'required|unique:trucks,truck_number,.$this->truck_id,truck_id',
             'postman_name',
             'date_of_operation'=>'required'
         ]);
